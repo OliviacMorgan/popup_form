@@ -1,0 +1,52 @@
+	/* Footer start */
+footer{
+	z-index: 2;
+	position: fixed;
+	height: 5.5em;
+	left:0;
+	bottom:0;
+	width: 100%;
+}
+
+	.footer-links{
+		position: absolute;
+		top: 50%;
+		left: 2em;
+		transform: translate(0%, -50%);
+	}
+
+	.social-menu li a:before {
+			font-family: 'Fontawesome';
+			-webkit-font-smoothing: antialiased;
+	 }
+	 /*-- add in 			content: '\f08e'; to social-menu li a:before if you want all links to have icons--*/
+
+	.social-menu li a[href*="facebook.com"]::before { content: '\f09a'; }
+
+	.social-menu li a[href*="instagram.com"]::before { content: '\f16d'; }
+
+	.social-menu li a[href*="linkedin.com"]::before { content: '\f0e1'; }
+
+	.social-menu li a[href*="youtube.com"]::before { content: '\f167'; }
+
+
+	.social-menu ul {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+
+	.menu ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+	}
+
+	.menu li a {
+			display: block;
+			text-decoration: none;
+			color: grey;
+			padding: .6em 1em;
+			font-weight: inherit !important;
+	}
