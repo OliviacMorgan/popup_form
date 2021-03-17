@@ -4,7 +4,7 @@
                 //checks if label exists in html element 
                 //makes an array of text with childnode property
                 let textnode = Array.from(element.childNodes).find(node => node.nodeName === "#text");//makes sure that child node name is text
-                console.log(textnode);
+
 
             //so if we find a child node with text in it run the following
             if(textnode) {
