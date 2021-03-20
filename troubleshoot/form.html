@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <script>
+window.addEventListener("load", e => {
+  var cardcost = 10;
+  document.getElementById("count").addEventListener("input", updateCost);
+
+  function updateCost(e) {
+    let val = e.target.value
+
+
+    if (val >= 100 && val <= 499) {
+      cardcost = cardcost * .95;
+    }
+    if (val >= 500 && val <= 999) {
+      cardcost = cardcost * .9;
+    }
+    if (val >= 1000) {
+      cardcost = cardcost * .85;
+    }
+    document.getElementById("curcost").textContent = cardcost;
+  }
+});
+  </script>
+
+</head>
+<body>
+
+    <div>
+        <form action="send.php" method="POST" class="form-content" id="popupform">
+              <label for="count">
+                <h4>How many cards would you like?</h4>
+                <input type="text" name="count" value="50" id="count">
+              </label>
+              <p>Current Cost Per Product: <output id="curcost">10</output> </p>
+        </form>
+</div>
+<footer>
+</footer>
+</body>
+
+</html>

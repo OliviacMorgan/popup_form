@@ -1,26 +1,45 @@
 
 
 window.addEventListener("load", e=>{
-    //read out order quality in product panel
-    var count = document.getElementById("count");
-    let popupcountfield = document.getElementById("totalcount");
+    var cardcost = document.getElementById("fiftycost").textContent;
+    var totalcountfield = document.getElementById("totalcount");
 
-    count.addEventListener("input", updateQuantity);
+    //dynamically calculate current cost of cards based on order quantity
+    document.getElementById("count").addEventListener("input", updateCost);
+    function updateCost(e) {
+      let val = e.target.value
+      let newcardcost = cardcost;
+      if (val >= 100 && val <= 499) {
+        newcardcost=cardcost;
+        newcardcost = (cardcost * .95).toFixed(2);
+      }
+      if (val >= 500 && val <= 999) {
+        newcardcost=cardcost;
+        newcardcost = (cardcost * .9).toFixed(2);
+      }
+      if (val >= 1000) {
+        newcardcost=cardcost;
+        newcardcost = (cardcost * .85).toFixed(2);
+      }
+      document.getElementById("curcost").textContent = newcardcost;
+    }
     
-        function updateQuantity(e){
-            popupcountfield.textContent=e.target.value;
-        }
-    
 
-    //Calculate cost per card based on quantity
-    var fifty = document.getElementById("fiftycost");
-    document.getElementById('onehundredcost').innerHTML = ((fifty.textContent)*.95).toFixed(2);
-    document.getElementById('fivehundredcost').innerHTML = ((fifty.textContent)*.90).toFixed(2);
-    document.getElementById('onethousandcost').innerHTML = ((fifty.textContent)*.85).toFixed(2);
+    //Calculate cost per card based on quantity for customer reference only
+    document.getElementById('onehundredcost').innerHTML = (cardcost*.95).toFixed(2);
+    document.getElementById('fivehundredcost').innerHTML = (cardcost*.90).toFixed(2);
+    document.getElementById('onethousandcost').innerHTML = (cardcost*.85).toFixed(2);
 
-    //MAIN- calculate total cost of order
+    //read out order quantity in product panel
 
     
+    document.getElementById("popupform").addEventListener("input", updatetotal);
+    
+    function updatetotal(){
+        let totalfield = document.getElementById("total");
+        
+
+    }
 
 });
 

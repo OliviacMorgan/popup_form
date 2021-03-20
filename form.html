@@ -4,14 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popup Cards by Model Space</title>
+    
     <script src="js/accessability.js"></script>
     <script src="js/calculator.js"></script>
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet"/>
-    <link href="css/accessability.css" rel="stylesheet"/>
 
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
         <div class="container-fluid">
@@ -42,7 +42,7 @@
       <span>Order Quantity: <output for="count" id="totalcount">50</output></span>
     </div>
     <div>
-        <form action="send.php" method="POST" class="form-content" >
+        <form action="send.php" method="POST" class="form-content" id="popupform">
             <div>
                 <p>Popup design user selected to customize here</p>
 
@@ -63,6 +63,7 @@
                 <h4>How many popups would you like?</h4>
                 <p>Minimum order of 50.</p>
                 <input type="text" name="count" value="50" id="count">
+                <p>Current Cost Per Card: <output id="curcost"></output></p>
               </label>
               <br>
               <label for="producttype">
