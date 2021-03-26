@@ -50,7 +50,7 @@
                  <h6>Cost per Card:</h6>
                  <!-- Add in Server Stored Cost per card later -->
                   <p>
-                    50 Cards: &#36;<span id="fiftycost">13.75</span> 
+                    50 Cards: &#36;<span id="fiftycost">12.75</span> 
                     | 100 Cards: &#36;<span id="onehundredcost"></span>
                     | 500 Cards: &#36; <span id="fivehundredcost"></span>
                     | 1000+ Cards: &#36;<span id="onethousandcost"></span>
@@ -68,14 +68,14 @@
               <br>
               <label for="producttype">
                 <h4>What kind of popup would you like?</h4>
-                <input type="radio" name="producttype"> 5"x7" Folding Card (Customer Favorite)<br>
-                <input type="radio" name="producttype"> Hardcover Booklet<br>
-                <input type="radio" name="producttype"> Softcover Booklet<br>
+                <input type="radio" name="producttype" class="data-card"> 5"x7" Folding Card (Customer Favorite)<br>
+                <input type="radio" name="producttype" class="data-book"> Hardcover Booklet<br>
+                <input type="radio" name="producttype" class="data-book"> Softcover Booklet<br>
               </label>
             </fieldset>
             <hr>
             <br>
-            
+
             <fieldset>
               <legend><h2>Inside Design Options</h2></legend>
               <label for="color">
@@ -86,135 +86,151 @@
                 <br>
               </label>
 
-              <label for="message">
-                <h4>What message would you like to have on the inside of your card?</h4>
-                <input type="text" name="message">
-                <br>
-              </label>
+              <!--Begin Card Design Spesific questions-->
+              <div class="cardinput">
+                <label for="message">
+                  <h4>What message would you like to have on the inside of your card?</h4>
+                  <input type="text" name="message">
+                  <br>
+                </label>
               
+                <label for="font" >
+                  <h4>What font would you like to use for your message?</h4>
+                  <br>
+                  <select name="font" id="">
+                    <option value="#">Insert Fonts</option>
+                    <option value="#">More Font Options</option>
+                </select>
+                </label>
 
-              <label for="font">
-                <h4>What font would you like to use for your message?</h4>
-                <br>
-                <select name="font" id="">
-                  <option value="#">Insert Fonts</option>
-                  <option value="#">More Font Options</option>
-              </select>
-              </label>
+                <label for="morefonts">
+                  <br>
+                  Let us know your prefered font and we will follow up to confirm your design. <br>
+                  <input type="text" name="morefonts">
+                  <br>
+                </label>
+                
+                <label for="logo">
+                  <h4>Include your logo above your message?</h4> <input type="checkbox"><br>
+                  Upload your logo here: <br>
+                  <input type="file" id="file" name="logofile">
+                </label>
+                <hr>
+              </div>
+            </fieldset>
 
-              <label for="morefonts">
-                <br>
-                Let us know your prefered font and we will follow up to confirm your design. <br>
-                <input type="text" name="morefonts">
-                <br>
-              </label>
-              
-              <label for="logo">
-                <h4>Include your logo above your message?</h4> <input type="checkbox"><br>
-                Upload your logo here: <br>
+            <fieldset>
+              <div class="cardinput">
+              <legend><h2>Outside Design Options</h2></legend>
+              <label for="front">
+                <h4>Would you like to change the default linework image on the front of the card?</h4>
+                <input type="radio" name="front" value="yes"> yes <br>
+                <input type="radio" name="front" value="no"> no <br>
+                <p>Upload your Image here:</p>
                 <input type="file" id="file" name="logofile">
               </label>
-              <hr>
-          </fieldset>
 
-          <fieldset>
-            <legend><h2>Outside Design Options</h2></legend>
-            <label for="front">
-              <h4>Would you like to change the default linework image on the front of the card?</h4>
-              <input type="radio" name="front" value="yes"> yes <br>
-              <input type="radio" name="front" value="no"> no <br>
-              <p>Upload your Image here:</p>
-              <input type="file" id="file" name="logofile">
-            </label>
-
-            <label for="logoreuse">
-              <h4>Use your logo from before?</h4>
-              <input type="radio" value="yes"> yes <br>
-              <input type="radio"value="no"> no <br>
-            </label>
-
-            <label for="imagefit"> <h4>How would you like your image to fit?</h4> 
-              <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
-              <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
-              Any extra notes on image size or positioning? <br>
-              <input type="text" name="imagefit"> 
-            </label>
-
-            <label for="bookletcover">
-              <h4>Would you like an image etched on the front of your booklet?</h4>
-              <input type="radio" value="yes"> yes <br>
-              <input type="radio"value="no"> no <br>
-            </label>
-            <hr>
-          </fieldset>
-          <fieldset>
-            <h2>Mailing Options</h2>
-            <label for="envelopes">
-              <h4>Include Envelopes with your order?</h4>
-              <p>+0.50 cents per card</p>
-              <input type="radio" value="yes"> yes <br>
-              <input type="radio"value="no"> no <br>
-            </label>
-            
-            <label for="package">
-              <h4>Package your popup cards in your envelopes?</h4>
-              <p>+0.50 cents per card</p>
-              <input type="radio" value="yes"> yes <br>
-              <input type="radio"value="no"> no <br>
-            </label>
-
-            <div id="addressform">
-              <label for="returnaddress">
-                <h4>Print Your Return Address on Your Envelopes?</h4>
+              <label for="logoreuse">
+                <h4>Use your logo from before?</h4>
                 <input type="radio" value="yes"> yes <br>
                 <input type="radio"value="no"> no <br>
               </label>
-              <div>
-                  <label for="field1" accesskey="F">First name: <input type="text" id="field1"></label>
-                  <label for="field2" accesskey="L">Last name: <input type="text" id="field2"></label>
-              </div>
-              <div>
-                  <label for="field3" accesskey="1">Address 1: <input type="text" id="field3" size="40"></label>
-              </div>
-              <div>
-                  <label for="field4" accesskey="2">Address 2: <input type="text" id="field4" size="40"></label>
-              </div>
-              <div>
-                  <label for="field5" accesskey="Z">ZIP Code: <input type="text" id="field5" size="10"></label>
-              </div>
-              <div>
-                  <label for="field6" accesskey="P">Phone: <input type="text" id="field6"></label>
-              </div>
-              <div class="policytext">
-                  <p>You can review our <a href="#" accesskey="v">privacy policy</a></p>
-              </div>
-          </div>
 
-            <label for="clients">
-              <h4>Print your client's addresses on your envelope?</h4>
-              <p>&#36;1.00 per card</p>
-              <input type="radio" value="yes"> yes <br>
-              <input type="radio"value="no"> no <br>
-              <p>Please download a pdf, word or excel document including the sending address.</p>
+              <label for="imagefit"> <h4>How would you like your image to fit?</h4> 
+                <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
+                <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
+                Any extra notes on image size or positioning? <br>
+                <input type="text" name="imagefit"> 
+              </label>
+            </div>
+          <!--End Card Design Spesific questions-->
+
+          <!--Begin Booklet Spesific Questions-->
+              <div class="bookinput">
+              <label for="bookletcover">
+                <h4>Would you like an image etched on the front of your booklet?</h4>
+                <input type="radio" value="yes"> yes <br>
+                <input type="radio"value="no"> no <br>
+              </label>
+            </div>
+              <hr>
+            </fieldset>
+          
+          <!--End Booklet Spesific Questions-->
+
+          <!--Begin Mailing Card Spesific Questions-->
+
+            <fieldset>
+              <div class="cardinput">
+              <h2>Mailing Options</h2>
+              <label for="envelopes">
+                <h4>Include Envelopes with your order?</h4>
+                <p>+0.50 cents per card</p>
+                <input type="radio" value="yes"> yes <br>
+                <input type="radio"value="no"> no <br>
+              </label>
               
-              <input type="file" id="file"><br>
-              <div class="policytext">
-                <p> Model Space will print mailing information exactly how is it presented on your uploaded documentation. <br>
-              Model Space is not liable for any incorrect information present in your documents</p>
-              </div>
-            </label>
+              <label for="package">
+                <h4>Package your popup cards in your envelopes?</h4>
+                <p>+0.50 cents per card</p>
+                <input type="radio" value="yes"> yes <br>
+                <input type="radio"value="no"> no <br>
+              </label>
 
-            
-            <label for="mailcards">
-              <h4>Mail your cards to your client?</h4>
-              <p>&#36;1.00 per card</p>    
-              <input type="radio" value="yes"> yes <br>
-              <input type="radio"value="no"> no <br> 
-              <br>    
-            </label>
+              <div id="addressform">
+                <label for="returnaddress">
+                  <h4>Print Your Return Address on Your Envelopes?</h4>
+                  <input type="radio" value="yes"> yes <br>
+                  <input type="radio"value="no"> no <br>
+                </label>
+                <div>
+                    <label for="field1" accesskey="F">First name: <input type="text" id="field1"></label>
+                    <label for="field2" accesskey="L">Last name: <input type="text" id="field2"></label>
+                </div>
+                <div>
+                    <label for="field3" accesskey="1">Address 1: <input type="text" id="field3" size="40"></label>
+                </div>
+                <div>
+                    <label for="field4" accesskey="2">Address 2: <input type="text" id="field4" size="40"></label>
+                </div>
+                <div>
+                    <label for="field5" accesskey="Z">ZIP Code: <input type="text" id="field5" size="10"></label>
+                </div>
+                <div>
+                    <label for="field6" accesskey="P">Phone: <input type="text" id="field6"></label>
+                </div>
+                <div class="policytext">
+                    <p>You can review our <a href="#" accesskey="v">privacy policy</a></p>
+                </div>
+            </div>
+
+              <label for="clients">
+                <h4>Print your client's addresses on your envelope?</h4>
+                <p>&#36;1.00 per card</p>
+                <input type="radio" value="yes"> yes <br>
+                <input type="radio"value="no"> no <br>
+                <p>Please download a pdf, word or excel document including the sending address.</p>
+                
+                <input type="file" id="file"><br>
+                <div class="policytext">
+                  <p> Model Space will print mailing information exactly how is it presented on your uploaded documentation. <br>
+                Model Space is not liable for any incorrect information present in your documents</p>
+                </div>
+              </label>
+
+              <label for="mailcards">
+                <h4>Mail your cards to your client?</h4>
+                <p>&#36;1.00 per card</p>    
+                <input type="radio" value="yes"> yes <br>
+                <input type="radio"value="no"> no <br> 
+                <br>    
+              </label>
+              </div>
+            </fieldset>
+
+          <!--End Mailing Card Spesific Questions-->
 
             <input type="submit" name="submit" value="Review Your Purchase">
-          </fieldset>
         </form>
 </div>
 <div class="calculator">
@@ -234,5 +250,6 @@
 </footer>
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/form_visual.js"></script>
 
 </html>

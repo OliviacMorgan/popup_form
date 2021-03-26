@@ -51,6 +51,11 @@ ol, ul{
     font-family:'Raleway', sans-serif;
     font-size: 15;
 }
+
+.hidden{
+    height: 0;
+	overflow: hidden;
+}
 	/* Footer start */
     footer{
         z-index: 2;

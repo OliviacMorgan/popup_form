@@ -7,17 +7,19 @@ window.addEventListener("load", e => {
 
   function updateCost(e) {
     let val = e.target.value
-
-
-    if (val >= 100 && val <= 499) {
+    switch(val){
+    case  val >= 100 && val <= 499: 
       cardcost = cardcost * .95;
-    }
-    if (val >= 500 && val <= 999) {
+      break;
+    case val >= 500 && val <= 999:
       cardcost = cardcost * .9;
-    }
-    if (val >= 1000) {
+      break;
+    case val >= 1000:
       cardcost = cardcost * .85;
-    }
+      break;
+    default:
+      cardcost = 10;
+  }
     document.getElementById("curcost").textContent = cardcost;
   }
 });
