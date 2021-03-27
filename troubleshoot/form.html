@@ -1,44 +1,93 @@
 <html lang="en">
-<head>
-  <script>
-window.addEventListener("load", e => {
-  var cardcost = 10;
-  document.getElementById("count").addEventListener("input", updateCost);
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  
+window.addEventListener("load", e=>{
 
-  function updateCost(e) {
-    let val = e.target.value
-    switch(val){
-    case  val >= 100 && val <= 499: 
-      cardcost = cardcost * .95;
-      break;
-    case val >= 500 && val <= 999:
-      cardcost = cardcost * .9;
-      break;
-    case val >= 1000:
-      cardcost = cardcost * .85;
-      break;
-    default:
-      cardcost = 10;
-  }
-    document.getElementById("curcost").textContent = cardcost;
-  }
+  $("input[type='radio'].data-card").change(function() {
+    //Check the value for "paypal", also verify that the radio is checked
+    if (this.checked) {
+        $(".bookinput").hide();
+        $(".cardinput").show();
+    } else {
+        //I figured you would want to unhide these if paypal isnt checked, here's the else
+        $(".bookinput").show();
+        $(".cardinput").hide();
+    }
+}); 
+
+$("input[type='radio'].data-book").change(function() {
+    //Check the value for "paypal", also verify that the radio is checked
+    if (this.checked) {
+        $(".bookinput").show();
+        $(".cardinput").hide();
+    } else {
+        //I figured you would want to unhide these if paypal isnt checked, here's the else
+        $(".cardinput").show();
+        $(".bookinput").hide();
+    }
 });
-  </script>
 
-</head>
+// var cardques = document.querySelectorAll(".cardinput");
+//     cardbtns = document.querySelector("input[type=radio].data-card")
+
+//     bookques = document.querySelectorAll(".bookinput");
+//     bookbtns = document.querySelectorAll("input[type=radio].data-book");
+
+//     // bookques.classList.add("hidden");
+
+//     for (var i=0; i<bookbtns.length; i++){
+//         bookbtns[i].addEventListener("change", evt=>{
+//         bookques.forEach(function(bookque){
+//         while(evt.target.value = "on" && bookque.classList.contains("hidden")==true)
+//           bookque.classList.remove("hidden");
+//          });
+//         cardques.forEach(function(cardque){
+//         cardque.classList.add("hidden");
+//         });
+                
+//         })
+//     }
+
+//     cardbtns.addEventListener("change", event=>{
+//       bookques.forEach(function(bookque){
+//         while(event.target.value = "on" && bookque.classList.contains("hidden")==false)
+//         bookque.classList.add("hidden")
+//       });
+//         cardques.forEach(function(cardque){
+//         while (cardque.classList.contains("hidden")==true)
+//         cardque.classList.remove("hidden");
+//          });
+//     })
+});
+</script>
+<style>
+  .hidden{
+    height: 0;
+	overflow: hidden;
+}
+</style>
+
 <body>
-
-    <div>
         <form action="send.php" method="POST" class="form-content" id="popupform">
-              <label for="count">
-                <h4>How many cards would you like?</h4>
-                <input type="text" name="count" value="50" id="count">
+              <label for="producttype">
+                <input type="radio" name="producttype" class="data-card"> Card Product<br>
+                <input type="radio" name="producttype" class="data-book"> Booklet Product 1<br>
+                <input type="radio" name="producttype" class="data-book"> Booklet Product 2<br>
               </label>
-              <p>Current Cost Per Product: <output id="curcost">10</output> </p>
+              <div class="bookinput">
+                <h2> Book Question 1</h2>
+              </div>
+              <div class="cardinput">
+                <h2>Card question 1</h2>
+              </div>
+              <div class="bookinput">
+                <h2> Book Question 2</h2>
+              </div>
+              <div class="cardinput">
+              <h2>Card Question 2</h2>
+              </div>
+            <input type="submit" name="submit" value="Review Your Purchase">
         </form>
-</div>
-<footer>
-</footer>
 </body>
-
 </html>
