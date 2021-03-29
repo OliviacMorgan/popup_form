@@ -35,7 +35,8 @@
 </head>
 <body>
     <div class="product">
-      <span>Order Quantity: <output for="count" id="totalcount">50</output></span>
+      <p>Order Quantity: <output for="count" id="totalcount">50</output></p>
+      <p>Your Cost Per Card: &#36;<output id="curcost"></output></p>
     </div>
     <div>
         <form action="send.php" method="POST" class="form-content" id="popupform">
@@ -59,14 +60,12 @@
                 <h4>How many popups would you like?</h4>
                 <p>Minimum order of 50.</p>
                 <input type="text" name="count" value="50" id="count">
-                <p>Current Cost Per Card: <output id="curcost"></output></p>
               </label>
               <br>
               <label for="producttype">
                 <h4>What kind of popup would you like?</h4>
                 <input type="radio" name="producttype" class="data-card"> 5"x7" Folding Card (Customer Favorite)<br>
-                <input type="radio" name="producttype" class="data-book"> Hardcover Booklet<br>
-                <input type="radio" name="producttype" class="data-book"> Softcover Booklet<br>
+                <input type="radio" name="producttype" class="no-card"> No Card Attached (-&#36;5 per card)<br>
               </label>
             </fieldset>
             <hr>
@@ -107,12 +106,12 @@
                 </label>
                 
                 <label for="logo">
-                  <h4>Include your logo above your message?</h4> <input type="checkbox"><br>
+                  <h4>Include your logo above your message?</h4> <input type="checkbox" id="testid"><br>
                   Upload your logo here: <br>
                   <input type="file" id="file" name="logofile">
                 </label>
-                <hr>
               </div>
+                <hr>
             </fieldset>
 
             <fieldset>
@@ -141,43 +140,30 @@
             </div>
           <!--End Card Design Spesific questions-->
 
-          <!--Begin Booklet Spesific Questions-->
-              <div class="bookinput">
-              <label for="bookletcover">
-                <h4>Would you like an image etched on the front of your booklet?</h4>
-                <input type="radio" value="yes"> yes <br>
-                <input type="radio"value="no"> no <br>
-              </label>
-            </div>
-              <hr>
-            </fieldset>
-          
-          <!--End Booklet Spesific Questions-->
-
           <!--Begin Mailing Card Spesific Questions-->
-
             <fieldset>
               <div class="cardinput">
               <h2>Mailing Options</h2>
               <label for="envelopes">
                 <h4>Include Envelopes with your order?</h4>
                 <p>+0.50 cents per card</p>
-                <input type="radio" value="yes"> yes <br>
-                <input type="radio"value="no"> no <br>
+                <input name="envlopes" type="radio" value="yes" id="yes-envelopes"> yes <br>
+                <input name="envlopes" type="radio"value="no"> no <br>
               </label>
               
               <label for="package">
                 <h4>Package your popup cards in your envelopes?</h4>
                 <p>+0.50 cents per card</p>
-                <input type="radio" value="yes"> yes <br>
-                <input type="radio"value="no"> no <br>
+                <input name="package" type="radio" value="yes" id="yes-pack"> yes <br>
+                <input name="package" type="radio"value="no"> no <br>
               </label>
 
               <div id="addressform">
                 <label for="returnaddress">
                   <h4>Print Your Return Address on Your Envelopes?</h4>
-                  <input type="radio" value="yes"> yes <br>
-                  <input type="radio"value="no"> no <br>
+                  <p>+0.30 cents per card</p>
+                  <input name="returnaddress" type="radio" value="yes" id="yes-returnadd"> yes <br>
+                  <input name="returnaddress" type="radio"value="no"> no <br>
                 </label>
                 <div>
                     <label for="field1" accesskey="F">First name: <input type="text" id="field1"></label>
@@ -203,8 +189,8 @@
               <label for="clients">
                 <h4>Print your client's addresses on your envelope?</h4>
                 <p>&#36;1.00 per card</p>
-                <input type="radio" value="yes"> yes <br>
-                <input type="radio"value="no"> no <br>
+                <input name="clients" type="radio" value="yes" id="yes-clients"> yes <br>
+                <input name="clients" type="radio"value="no"> no <br>
                 <p>Please download a pdf, word or excel document including the sending address.</p>
                 
                 <input type="file" id="file"><br>
@@ -217,8 +203,8 @@
               <label for="mailcards">
                 <h4>Mail your cards to your client?</h4>
                 <p>&#36;1.00 per card</p>    
-                <input type="radio" value="yes"> yes <br>
-                <input type="radio"value="no"> no <br> 
+                <input name="mailcards" type="radio" value="yes" id="yes-mail"> yes <br>
+                <input name="mailcards" type="radio"value="no"> no <br> 
                 <br>    
               </label>
               </div>
