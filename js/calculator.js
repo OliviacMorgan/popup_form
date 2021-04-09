@@ -1,5 +1,6 @@
 
 window.addEventListener("load", e=>{
+
   var cardcost = document.getElementById("fiftycost").textContent;
     cardtotal = document.getElementById("count");
     totalelem = document.getElementById("total");
@@ -33,31 +34,34 @@ window.addEventListener("load", e=>{
       costper = parseFloat(newcardcost)
 
       //if you select not card attached
-
-      if (document.querySelector("input[type='radio'].no-card").checked){
+      //BUG items will add to total wiether or not its visable
+      //need to check if item is visible
+      if (document.querySelector("input[value='nocard']").checked){
         totalamt -= (val*5);
         costper-= 5;
       };
-      if (document.querySelector("#yes-envelopes").checked){
-        totalamt += (val*.5)
-        costper+= .5;
-      }
-      if (document.querySelector("#yes-pack").checked){
-        totalamt += (val*.5)
-        costper += .5;
-      }
-      if (document.querySelector("#yes-returnadd").checked){
-        totalamt += (val*.3)
-        costper += .3;
-      }
-      if (document.querySelector("#yes-clients").checked){
-        totalamt += (val*1)
-        costper += 1;
-      }
-      if (document.querySelector("#yes-mail").checked){
-        totalamt += (val*1)
-        costper += 1;
-      }
+      if (document.querySelector("input[value='card']").checked){
+        if (document.querySelector("#yes-envelopes").checked){
+          totalamt += (val*.5)
+          costper+= .5;
+        }
+        if (document.querySelector("#yes-pack").checked){
+          totalamt += (val*.5)
+          costper += .5;
+        }
+        if (document.querySelector("#yes-returnadd").checked){
+          totalamt += (val*.3)
+          costper += .3;
+        }
+        if (document.querySelector("#yes-clients").checked){
+          totalamt += (val*1)
+          costper += 1;
+        }
+        if (document.querySelector("#yes-mail").checked){
+          totalamt += (val*1)
+          costper += 1;
+        }
+      };
 
       totalelem.value = totalamt.toFixed(2);
       costelem.value = costper.toFixed(2);
