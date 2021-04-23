@@ -27,10 +27,14 @@ $(document).ready(function() {
     $("#includelogo1").change(function(){
         if ($("input[value=yeslogo]:checked").val()){
             $("#includelogo2").show();
+            $("#outsideimg3").show();
+            $("#outsideimg4").hide();
             $("input[name=logofile]").attr("required", true);
         }
         if($("input[value=nologo]:checked").val()){
             $("#includelogo2").hide();
+            $("#outsideimg3").hide();
+            $("#outsideimg4").show();
             $("input[name=logofile]").attr("required", false);
         }
     })
@@ -51,6 +55,7 @@ $(document).ready(function() {
             $("#outsideimg4").hide();
             $("input[name=logoreuse]").attr("required", false);
         }
+        //no upload a new image
         if ($("input[value=nobefore]:checked").val()){
             $("#outsideimg4").show();
             $("input[name=logoreuse], input[name=imagefit]").attr("required", true);

@@ -68,21 +68,11 @@ window.addEventListener("load", e=>{
 
 
     }
-    
 
     //Calculate cost per card based on quantity for customer reference only
     document.getElementById('onehundredcost').innerHTML = (cardcost*.95).toFixed(2);
     document.getElementById('fivehundredcost').innerHTML = (cardcost*.90).toFixed(2);
     document.getElementById('onethousandcost').innerHTML = (cardcost*.85).toFixed(2);
-
-    //read out order quantity in product panel
-    document.getElementById("popupform").addEventListener("input", updatetotal);
-    
-    function updatetotal(){
-        let totalfield = document.getElementById("total");
-        
-
-    }
 
 });
 

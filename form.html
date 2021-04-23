@@ -34,12 +34,18 @@
 
 </head>
 <body>
-    <div class="product">
-      <p>Order Quantity: <output for="count" id="totalcount">50</output></p>
-      <p>Your Cost Per Card: &#36;<output id="curcost"></output></p>
+    <div class="product-panel">
+      <div class="product">
+        <img id="productpic" src="img/" alt="">
+        <output name="messageresult" for="message"></output>
+      </div>
+      <div class="order-numbers">
+        <p>Order Quantity: <output for="count" id="totalcount">50</output></p>
+        <p>Your Cost Per Card: &#36;<output id="curcost"></output></p>
+      </div>
     </div>
     <div>
-        <form action="send.php" method="POST" class="form-content" id="popupform">
+        <form action="" method="POST" class="form-content" id="popupform">
             <div>
                 <p>Popup design user selected to customize here</p>
 
@@ -94,7 +100,20 @@
                   <h4>What font would you like to use for your message?</h4>
                   <br>
                   <select name="font" >
-                    <option value="Insert Fonts">Insert Fonts</option>
+                    <option> Select a Font</option>
+                    <option style="font-family:Helvetica, sans-serif">Helvetica, sans-serif</option>
+                    <option style="font-family:roboto">Roboto</option>
+                    <option style="font-family:raleway">Raleway</option>   
+                    <option style="font-family:tahoma">Tahoma</option> 
+                    <option style="font-family:Trebuchet MS">Trebuchet MS</option>
+                    <option style="font-family:Playfair Display">Playfair Display</option>    
+                    <option style="font-family:Times New Roman">Times New Roman</option>
+                    <option style="font-family:georgia">Georgia</option>
+                    <option style="font-family:Garamond, serif;">Garamond, serif</option>
+                    <option style="font-family:courier new">Courier New</option>
+                    <option style="font-family:Brush Script MT">Brush Script MT</option>     
+                    <option style="font-family:arial">Arial</option> 
+                    <option style="font-family:Verdana, sans-serif">Verdana, sans-serif</option>
                     <option value="More Font Options">More Font Options</option>
                 </select>
                 </label>
@@ -136,25 +155,25 @@
                   <input type="radio" value="yesbefore" name="logoreuse"> yes <br>
                   <input type="radio"value="nobefore" name="logoreuse"> no - upload a new image<br>
               </label>
-                <div id="outsideimg4">
-                  <p>Upload your new Image here:</p>
-                  <input type="file" id="file" name="logoreuse">
-                  <label for="imagefit"> 
-                    <h4>How would you like your image to fit?</h4> 
-                    <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
-                    <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
-                    Any extra notes on image size or positioning? <br>
-                    <input type="text" name="imagefitnotes"> 
-                  </label>
-                </div>
+                  <div id="outsideimg4"><br>
+                    <p>Upload your new Image here:</p>
+                    <input type="file" id="file" name="logoreuse">
+                    <label for="imagefit"> 
+                      <h4>How would you like your image to fit?</h4> 
+                      <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
+                      <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
+                      Any extra notes on image size or positioning? <br>
+                      <input type="text" name="imagefitnotes"> 
+                    </label>
+                  </div>
               </div>
             <hr>
             </div>
-            
+            </fieldset>
           <!--End Card Design Spesific questions-->
 
           <!--Begin Mailing Card Spesific Questions-->
-            <fieldset>
+            <fieldset id="mail">
               <div class="cardinput">
               <h2>Mailing Options</h2>
               <label for="envelopes" id="mail1">
@@ -231,7 +250,8 @@
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/form_visual.js"></script>
+<script src="js/formques.js"></script>
+<script src="js/form_render.js"></script>
 <script src="js/calculator.js"></script>
 
 </html>
