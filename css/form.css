@@ -27,9 +27,12 @@
     top: 20%;
 }
 .product{
-    background-color:coral;
     height: 100%;
     width: 78%;
+}
+.product img{
+    height: 100%;
+    width: 100%;
 }
 .order-numbers{
     position: absolute;

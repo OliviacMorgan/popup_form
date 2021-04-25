@@ -2,12 +2,9 @@ window.addEventListener("load", e=>{
     var message = document.querySelector("textarea[name='message']");
     var messageoutput = document.querySelector("output[name='messageresult']");
     var productpic = document.querySelector("#productpic")
-    var eleheight = document.querySelector('#mail')
-   
-    // console.log(eleheight.offsetHeight);
-    // console.log((eleheight.offsetTop + eleheight.offsetHeight));
+    var eleheight = document.querySelector('#mail1')
 
-        
+     // this reads out custom message with font    
     document.querySelector("form").addEventListener('change', renderCard)
         function renderCard(){
             messageoutput.innerHTML=message.value
@@ -17,12 +14,26 @@ window.addEventListener("load", e=>{
           }
         }
     
-    document.addEventListener('scroll', evn=> {
-          if (window.scrollY >(eleheight.offsetTop + eleheight.offsetHeight)) {
-            productpic.src="img/letters.svg";
-          }
-        });
 
-        return renderCard();
-        
+    //source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+    //This example doesn't totally work if your element is taller than your window, I fixed this in the return section
+       
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      //you used these logs to troubleshoot the values you needed 
+      // console.log(rect.bottom -rect.height + " bottom - height");
+      // console.log(window.innerHeight+" window inner Height");
+      return (
+          rect.bottom - rect.height <= window.innerHeight/2 && rect.top + rect.height >= window.innerHeight/2   
+      );
+  }
+  const box = document.querySelector('#mail');
+  document.addEventListener('scroll', function () {
+      const messageText = isInViewport(box) ?
+      productpic.src="img/letters.svg" :
+      productpic.src="img/";
+  }, {
+      passive: true
+  });
+        return renderCard();    
 })
