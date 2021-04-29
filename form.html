@@ -36,7 +36,7 @@
 <body>
     <div class="product-panel">
       <div class="product">
-        <img id="productpic" src="img/" alt="">
+          <object id="inside-design" data="img/inside-design.svg" type="image/svg+xml"></object>
         <output name="messageresult" for="message"></output>
       </div>
       <div class="order-numbers">
@@ -46,9 +46,8 @@
     </div>
     <div>
         <form action="" method="POST" class="form-content" id="popupform">
-            <div>
-                <p>Popup design user selected to customize here</p>
-
+                <div>
+                  <img src="img/inside-design-main.svg" alt="">
                 <div>
                  <h6>Cost per Card:</h6>
                  <!-- Add in Server Stored Cost per card later -->
@@ -71,7 +70,7 @@
               <label for="producttype" id="producttype">
                 <h4>What kind of popup would you like?</h4>
                 <input type="radio" name="producttype" value=card checked="checked"> 5"x7" Folding Card (Customer Favorite)<br>
-                <input type="radio" name="producttype" value=nocard> No Card Attached (-&#36;5 per card)<br>
+                <input type="radio" name="producttype" value=nocard data-tool-tip="We will just provide you with the folded popup with nothing attached"> No Card Attached (-&#36;5 per card)<br>
               </label>
             </fieldset>
             <hr>
@@ -149,6 +148,14 @@
                 <input type="radio" name="front" value="yesimg"> yes <br>
                 <input type="radio" name="front" value="noimg"> no <br>
               </label>
+               <!-- OLIVIA Include this in the formque.js-->
+              <label for="outsidemessage">
+                <h4>Would you like a message below this image?</h4>
+                <input type="radio" name="outsidemessage" value="yesmes"> yes <br>
+                <input type="radio" name="outsidemessage" value="nomes"> no <br>
+                <textarea name="" class="form-control" rows="4"></textarea>
+                  <br>
+              </label>
               <div id="outsideimg2">
               <label for="logoreuse" id="outsideimg3">
                   <h4>Use your logo from before?</h4>
@@ -161,6 +168,7 @@
                     <label for="imagefit"> 
                       <h4>How would you like your image to fit?</h4> 
                       <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
+                      <!--OLIVIA - if choose this option AND add outside message add note about "message may not come out ok yada yada"-->
                       <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
                       Any extra notes on image size or positioning? <br>
                       <input type="text" name="imagefitnotes"> 
@@ -249,7 +257,6 @@
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/formques.js"></script>
 <script src="js/form_render.js"></script>
 <script src="js/calculator.js"></script>
 

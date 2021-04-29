@@ -39,8 +39,31 @@
     bottom: 0;
     right:1em;
     width: 20%;
-    background-color: aquamarine;
 }
+
+/* hover messages start */
+/* BUG -- only works when hovering over radtio button, OLIVIA revisit this for more efficiency*/
+input[value='nocard']{
+    position: relative;
+}
+input[value='nocard']::after{
+    content:attr(data-tool-tip);
+    position: absolute;
+    top: 2em;
+    background-color: darkgrey;
+    display: block;
+    padding: .5em .5em;
+    white-space: nowrap;
+    font-size: .8em;
+    transform: scale(0);
+    transition:transform ease-out 100ms;
+}
+
+input[value='nocard']:hover::after{
+    transform: scale(1);
+}
+/* hover messages end */
+
 
 /* accessability start*/
 input {
@@ -103,7 +126,6 @@ input[type=file] {
     font-weight: bold;
 }
 
-/* ---------------- */
 
 /* Give the user a hint that label is clickable */
 label {
@@ -138,10 +160,7 @@ input[type=password]:focus {
 .accesskey {
     text-decoration: underline;
 }
-
-
 /* accessability end*/
-
 
 
 @media only screen and (max-width: 800px){
@@ -169,11 +188,9 @@ input[type=password]:focus {
         left:0;
         right:0;
         width: auto;
-        background-color: aquamarine;
     }
 
     .product{
-        background-color:coral;
         height: auto;
         width: auto;
     }

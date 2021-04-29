@@ -1,8 +1,20 @@
 window.addEventListener("load", e=>{
+    //Load up SVGS into document 
+    //answerhere: https://stackoverflow.com/questions/2753732/how-to-access-svg-elements-with-javascript
+    var svgindes = (document.getElementById("inside-design")).contentDocument;
+
+    var messagesvg = svgindes.querySelector("#messagesvg");
+    var logosvg = svgindes.querySelector("#logosvg");
+
+    messagesvg.style.display ='none'
+    logosvg.style.display ='none'
+    
+
+    //outside message vars
     var message = document.querySelector("textarea[name='message']");
     var messageoutput = document.querySelector("output[name='messageresult']");
-    var productpic = document.querySelector("#productpic")
-    var eleheight = document.querySelector('#mail1')
+    //test var for product pic OLIVIA change this around
+    var productpic = document.querySelector("#productpic");
 
      // this reads out custom message with font    
     document.querySelector("form").addEventListener('change', renderCard)

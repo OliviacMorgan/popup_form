@@ -50,12 +50,14 @@ $(document).ready(function() {
         }
     }) 
     //Use your logo from before?
+    //BUG -- this will show even if you choose nothing on "logo above message"
     $("#outsideimg3").change(function(){
         if($("input[value=yesbefore]:checked").val()){
             $("#outsideimg4").hide();
             $("input[name=logoreuse]").attr("required", false);
         }
         //no upload a new image
+        //BUG -- include "how you would like your image to fit" with logo choice
         if ($("input[value=nobefore]:checked").val()){
             $("#outsideimg4").show();
             $("input[name=logoreuse], input[name=imagefit]").attr("required", true);
