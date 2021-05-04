@@ -5,69 +5,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    window.addEventListener("load", e=>{
-      var elementTarget = document.getElementById("section-2");
-      console.log(elementTarget.offsetTop + elementTarget.offsetHeight);
-    window.addEventListener("scroll", function() {
-      
-      if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-          alert("You've scrolled past the second div");
-          
-      }
+    window.addEventListener('load', e=>{
+      document.querySelector("#inside-design-options").addEventListener('input', evnt=>{
+      // //Begin popup color
+      let coloroutline = document.querySelector("#coloroutlinesvg");
+      let popupcolor = document.querySelector("select[name='color']").value;
+      console.log(popupcolor);
+      coloroutline.setAttribute('style', 'fill:'+popupcolor);
+      // //End popup color
+
     });
-  })
+
+    })
     </script>
     <!-- language: lang-css -->
     <style>
-    .section-1 {
-      height: 400px;
-      width: 100%;
-      background: green;
-    }
-    
-    .section-3 {
-      height: 400px;
-      width: 100%;
-      background: orange;
-    }
+
     </style>
   <title>Document</title>
 </head>
 <body>
-  <!-- language: lang-html -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="section-1"></div>
-<div id="section-2">Scroll past this div</div>
-<div class="section-3"></div>
 
-<!-- end snippet -->
-  
+  <form action="">
+  <fieldset id="inside-design-options">
+    <legend><h2>Inside Design Options</h2></legend>
+    <label for="color">
+      <h4>What color would you like your popup to be?</h4>
+      <select name="color" id="">
+        <option value="#">Insert Color</option>
+        <option value="#ff0000">red</option>
+        <option value="#0019ff">blue</option>
+      </select>
+      <br>
+    </label>
+  </fieldset>
+</form>
+      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr" style="position:absolute; height:200;"> 
+        <path id="coloroutlinesvg" style="fill:#969696;" 
+		d="M1319.04,937.27l-64.45-60.56l-9.88,11.83l-0.74,0.89l5.76-131.62l-81.31-19.45l-40.38-9.62l2.02-54.6
+		l34.33-4.94l1.83-47.06l-32.27-6.75l-71.37-69.49l-40.35,46.13l-5.42-1.13l-117.43,14.99l1.41-71.42l35.88-4.19l1.24-47.79
+		l-31.44-5.62l-78.2-74.4l-74.69,82.49l-100.64,10.74l57.38,11.68l-0.66,49.43l38.74-4.53l-0.7,45.14l-35.62,40.72l-22.33-5.37
+		l-38.26,4.9l-56.85,7.28l0.52-74.76l39.38-4.6l0.45-49.97l-37.41-7.84l-84.81-75.29l-80.39,86.73l-102.26,10.91l54.63,12.86
+		l0.25,51.76l42.65-4.98l0.24,98.63l-54.57-15.11l-42.02,5.38l-86.92,11.13l78.55,23.09l0.01,0l2.5,300.17l-77.31-30.08l-84.83,14.4
+		l306.27,124.01l0,54.24l45.59-9.28l-0.28,103.26l37.18-8.13l0.5-102.74l44.21-9l-0.76,102.12l96.45-21.1l0.51-38.79l62.54-13.31
+		l0.83-50.64l1.6-97.58l63.72,22.11l-1.05,51.65l41.03-8.35l-2.23,98.41l33.51-7.33l2.41-97.93l39.84-8.11l-2.62,97.37l87.06-19.04
+		l1.57-37.2l47.21-9.96l1.66-48.4l3.2-93.22l65.93,20.01l-1.89,49.3l37.13-7.56l-3.81,93.99l30.35-6.64l3.95-93.56l36.08-7.34
+		l-4.12,93.04l78.98-17.28l4.49-91.91l4.4-0.9l29.94-6.09l2.42-47.67L1319.04,937.27z M528.27,578.01l41.99-4.91l-0.22,40.81
+		l-41.89,5.15L528.27,578.01z M504.12,580.83l-0.18,97.59l-41.2,5.41l-0.05-98.16L504.12,580.83z M603.74,996.63l-30.44,35.15
+		l-30.06-11.01l-42.37,7.74l-84.34-31.47l-0.01,0l-0.45-146.98l86.6,28.39l58.76,19.27l-0.27,52.5l42.99-7.43L603.74,996.63z
+		 M577.99,825.04l0.89-146.13l58.45,15.31l-0.47,50.91l40.76-5.87l-0.64,55.59l-29.37,33.05l-29.39-9.07L577.99,825.04z
+		 M666.78,1178.11l-44.63,9.37l0.38-42.97l44.73-9.1L666.78,1178.11z M673.46,1046.51l0.38-0.07l-0.2-0.16l0.2,0.16h0l0.49,0.39
+		L673.46,1046.51z M679.99,1028.42l-22.85,4.83l-18.68-15.17l0.98-81.38l41.73-7.21L679.99,1028.42z M839.88,541.58l38.22-4.47
+		l-0.88,39.03l-38.14,4.69L839.88,541.58z M780.23,548.56l37.67-4.4l-1.7,88.34l-36.84-33.28L780.23,548.56z M773.77,725.42
+		l40.14-5.78l-0.77,40.16l-40.06,6.01L773.77,725.42z M711.08,734.44l39.6-5.7l-1.5,96.01l-2.83,0.45l-36.08-30.63L711.08,734.44z
+		 M747.11,959.36l-42.17,7.55l0.55-41.63l42.27-7.3L747.11,959.36z M925.06,958.06l-15.72,19.68l-47.59-15.17l-38.15,6.64
+		l2.58-143.8l62.97,18.25l-1.19,50.1l38.93-6.73L925.06,958.06z M921.12,772.01l-37.18,5.75l0.97-48.94l2.12-91.09l61.49,14.08
+		l-1.3,48.65l37.06-5.33l-1.91,66.16l-18.92,21.85L921.12,772.01z M958.87,881.51l37.83-6.54l-2.82,94.53l-2.77,0.53l-33.88-29.25
+		L958.87,881.51z M997.53,1108.67l-40.27,8.45l1.16-40.97l40.36-8.21L997.53,1108.67z M1013.72,723.4l1-32.66l36.04-5.19l-1.05,32.3
+		l-35.83,5.78l35.36,8.62l-1.14,35.01l-34.74-31.97L1013.72,723.4z M1055.8,904.08l-38.28,6.85l1.24-39.77l38.36-6.63L1055.8,904.08
+		z M1106.97,715.7l-20.68,3.1l-14.56-3.47l-1.05-0.25l1.1-32.56l36.57-5.26L1106.97,715.7z M1225.66,911.36l0.05-0.06l0.13,0.11
+		L1225.66,911.36z M1296.82,1045.85l-36.52,7.67l1.78-39.15l36.59-7.45L1296.82,1045.85z"/>
+      </svg>
 </body>
 </html>

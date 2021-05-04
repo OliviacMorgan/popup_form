@@ -33,9 +33,7 @@ window.addEventListener("load", e=>{
       totalamt = (newcardcost*val);
       costper = parseFloat(newcardcost)
 
-      //if you select not card attached
-      //BUG items will add to total wiether or not its visable
-      //need to check if item is visible
+      //if you select no card attached
       if (document.querySelector("input[value='nocard']").checked){
         totalamt -= (val*5);
         costper-= 5;
@@ -65,8 +63,6 @@ window.addEventListener("load", e=>{
 
       totalelem.value = totalamt.toFixed(2);
       costelem.value = costper.toFixed(2);
-
-
     }
 
     //Calculate cost per card based on quantity for customer reference only

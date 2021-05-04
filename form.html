@@ -34,19 +34,36 @@
 
 </head>
 <body>
+    <!-- Begin Product Panel -->
     <div class="product-panel">
       <div class="product">
-          <object id="inside-design" data="img/inside-design.svg" type="image/svg+xml"></object>
-        <output name="messageresult" for="message"></output>
+          <object id="inside-design" class="product-render" data="img/inside-design.svg" type="image/svg+xml"></object>
+        <!--first line of message-->
+          <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr"> 
+            <path id="messagelineone" fill="none" stroke="none" D="M614.85 1396.01,  L1647.48 1128.89"/>
+            <text x="0px" y="0px"  text-anchor="middle" font-size="4em" >
+              <textPath href="#messagelineone" startOffset="50%" ></textPath>
+            </text>
+          </svg>
+          <!--second line of message-->
+          <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr"> 
+            <path id="messagelinetwo" fill="none" stroke="none" D="M701.88 1446.33,  L1739.38 1172.1"/>
+            <text x="0px" y="0px"  text-anchor="middle" font-size="4em">
+              <textPath href="#messagelinetwo" startOffset="50%"></textPath>
+            </text>
+          </svg>
+
+
       </div>
       <div class="order-numbers">
         <p>Order Quantity: <output for="count" id="totalcount">50</output></p>
         <p>Your Cost Per Card: &#36;<output id="curcost"></output></p>
       </div>
     </div>
+    <!-- End Product Panel -->
     <div>
         <form action="" method="POST" class="form-content" id="popupform">
-                <div>
+                <div id="top-form">
                   <img src="img/inside-design-main.svg" alt="">
                 <div>
                  <h6>Cost per Card:</h6>
@@ -59,7 +76,7 @@
                   </p> 
                 </div>
             </div>
-            <fieldset>
+            <fieldset id="general-design">
               <legend><h2>General Design</h2></legend>
               <label for="count">
                 <h4>How many popups would you like?</h4>
@@ -76,22 +93,77 @@
             <hr>
             <br>
 
-            <fieldset>
+            <fieldset id="inside-design-options">
               <legend><h2>Inside Design Options</h2></legend>
               <label for="color">
                 <h4>What color would you like your popup to be?</h4>
-                <select name="color" id="">
-                  <option value="#">Insert Color</option>
-                  <option value="red">red</option>
-                  <option value="blue">blue</option>
+                <select name="color" id="color-menu">
+                  <!--OLIVIA- add in extra card values to final cost calculation-->
+                  <div></div>
+                  <option value="#969696">Insert Color</option>
+                  <option value="#5F4C3D">chocolate</option>
+                  <option value="#2C2C2C">black</option>
+                  <option value="#858585">smoke</option>
+                  <option value="#B8232F">ruby red</option>
+                  <option value="#46232A">burgundy</option>
+                  <option value="#B8232F">garnet</option>
+                  <option value="#EE4D9D">magenta</option>
+                  <option value="#FFC6CD">candy pink</option>
+                  <option value="#FBC6B6">blush</option>
+                  <option value="#D0D5EB">lilac</option>
+                  <option value="#BBDDF8">baby blue</option>
+                  <option value="#576DB6">boardwalk blue</option>
+                  <option value="#AEBBB2">slate</option>
+                  <option value="#B0DFD7">seafoam</option>
+                  <option value="#214370">navy</option>
+                  <option value="#0E92C3">pool</option>
+                  <option value="#B6DBE4">pastel blue</option>
+                  <option value="#404751">nautical blue</option>
+                  <option value="#026F74">teal</option>
+                  <option value="#CCE505">wasabi</option>
+                  <option value="#579667">holiday green</option>
+                  <option value="#13442F">green linen</option>
+                  <option value="#88C557">limelight</option>
+                  <option value="#A7D8A9">pastel green</option>
+                  <option value="#99A960">avocado</option>
+                  <option value="#FDF69E">lemonade</option>
+                  <option value="#FFF9A1">citrus</option>
+                  <option value="#FFBD04">sunflower</option>
+                  <option value="#FF7A39">mandarin</option>
+                  <option value="#FD393B">electric coral</option>
+                  <option value="#EE5E43">tangerine</option>
+                  <option value="#D9A47A">copper metallic (+10 &#36; per 50)</option>
+                  <option value="#AD8F77">bronze metallic (+10 &#36; per 50)</option>
+                  <option value="#8896A3">anthracite metallic (+10 &#36; per 50)</option>
+                  <option value="#F6F6F6">silver metallic (+10 &#36; per 50)</option>
+                  <option value="#DBB467">gold metallic (+10 &#36; per 50)</option>
+                  <option value="#DF3649">jupiter metallic (+10 &#36; per 50)</option>
+                  <option value="#D0AEAD">misty rose metallic (+10 &#36; per 50)</option>
+                  <option value="#DB3272">azalea metallic (+10 &#36; per 50)</option>
+                  <option value="#FECFD7">rose quart metallic (+10 &#36; per 50)</option>
+                  <option value="#C7B3E4">amethyst metallic (+10 &#36; per 50)</option>
+                  <option value="#192E49">lapis metallic (+10 &#36; per 50)</option>
+                  <option value="#D9EEEF">aquamarine metallic (+10 &#36; per 50)</option>
+                  <option value="#9AB1DD">vista metallic (+10 &#36; per 50)</option>
+                  <option value="#8DBE62">fairway metallic (+10 &#36; per 50)</option>
+                  <option value="#FD7837">flame metallic (+10 &#36; per 50)</option>
+                  <option value="#BBBBBB">silver sparkle (+20 &#36; per 50)</option>
+                  <option value="#C5AC72">gold sparkle (+20 &#36; per 50)</option>
+                  <option value="#D6A270">rose gold sparkle (+20 &#36; per 50)</option>
+                  <option value="#E53459">holiday red sparkle (+20 &#36; per 50)</option>
                 </select>
                 <br>
               </label>
               <!--Begin Card Design Spesific questions-->
               <div class="cardinput">
-                <label for="message">
-                  <h4>What message would you like to have on the inside of your card?</h4>
-                  <textarea name="message" class="form-control" rows="4"></textarea>
+                <label for="messagein">
+                  <h4>Would you like a message on the bottom inside of your card?</h4>
+                  <!--OLIVIA -- include this radio in the formques.js-->
+                  <input type="radio" name="messagein" value="yesmesin"> yes <br>
+                  <input type="radio" name="messagein" value="nomesin"> no <br>
+                  <input type="text" name="messageinfirst"  placeholder="First line of your message" style="width: 80%">
+                  <br>
+                  <input type="text" name="messageinsecond" placeholder="Second line of your message. (optional)" style="width: 80%;">
                   <br>
                 </label>
               
@@ -179,6 +251,7 @@
             </div>
             </fieldset>
           <!--End Card Design Spesific questions-->
+          
           <!--Begin Mailing Card Spesific Questions-->
             <fieldset id="mail"> 
               <div class="cardinput">

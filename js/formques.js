@@ -1,4 +1,4 @@
-
+<script src="js/jquery-3.6.0.min.js"></script>
 $(document).ready(function() {
     $("#fontoptions2, #includelogo2, #outsideimg2, #outsideimg4, #mail2, #mail4, #mail6").hide();
 
