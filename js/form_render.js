@@ -4,9 +4,9 @@ window.addEventListener("load", e=>{
     var product = document.querySelector(".product")
     var svgindes = (document.getElementById("inside-design")).contentDocument;
 
-    var logosvg = svgindes.querySelector("#logosvg");
-    //this is how the product looks on load at the top of the page
-    logosvg.style.display ='none'
+    // var logosvg = svgindes.querySelector("#logosvg");
+    // //this is how the product looks on load at the top of the page
+    // logosvg.style.display ='none'
     
 
     //INSIDE DESIGN OPTIONS 
@@ -14,28 +14,18 @@ window.addEventListener("load", e=>{
     //Begin style for color pull down menu
     //answer source: https://usefulangle.com/post/254/javascript-loop-through-select-options
     Array.from(document.querySelector("#color-menu").options).forEach(function(colorpulldowns){
-    // determine font color based on background
-    //source: https://stackoverflow.com/questions/11867545/change-text-color-based-on-brightness-of-the-covered-background-area
-    // function getContrast(hexcolor, textelem){
-    //   hexcolor = hexcolor.replace("#", "");
-    //   var r = parseInt(hexcolor.substr(0,2),16);
-    //   var g = parseInt(hexcolor.substr(2,2),16);
-    //   var b = parseInt(hexcolor.substr(4,2),16);
-    //   var textColor = ((((r*299)+(g*587)+(b*114))/1000) > 125) ? 'black' : 'white';
-    //   textelem.style.color = textcolor
-    // }
         var bgcolors = colorpulldowns.value
         colorpulldowns.style.backgroundColor = bgcolors;
-        // return getContrast(bgcolors, colorpulldowns);
-
     });
     //End style for color pull down menu  
+
     document.querySelector("#inside-design-options").addEventListener('input', evnt=>{
       //Begin popup color
       let coloroutline = svgindes.querySelector("#coloroutlinesvg");
+      console.log(coloroutline);
       let popupcolor = document.querySelector("select[name='color']").value;
       coloroutline.setAttribute('style', 'fill:'+popupcolor);
-      // //End popup color
+      //End popup color
 
       //Begin inside message of card
       let message1 = document.querySelector('input[name="messageinfirst"]');
@@ -56,9 +46,8 @@ window.addEventListener("load", e=>{
         messageoutput1.innerHTML="";
         messageoutput2.innerHTML="";
       }
-      //End inside message of card
-
     });
+    //End inside message of card
 
     //source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
     //This example doesn't totally work if your element is taller than your window, I fixed this in the return section

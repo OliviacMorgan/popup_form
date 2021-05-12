@@ -5,10 +5,6 @@
 	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
 	.st2{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
 </style>
-<g id="upright_card">
-	<polygon class="st0" points="1158.86,953.31 1195.81,13.66 5.47,57.83 33.47,1167.26 697.86,1487.98 1914.03,1174.31 	"/>
-	<line class="st0" x1="1158.86" y1="953.31" x2="33.47" y2="1167.26"/>
-</g>
 <path id="coloroutlinesvg" style="fill:#969696;" 
 		d="M1319.04,937.27l-64.45-60.56l-9.88,11.83l-0.74,0.89l5.76-131.62l-81.31-19.45l-40.38-9.62l2.02-54.6
 		l34.33-4.94l1.83-47.06l-32.27-6.75l-71.37-69.49l-40.35,46.13l-5.42-1.13l-117.43,14.99l1.41-71.42l35.88-4.19l1.24-47.79
@@ -287,10 +283,6 @@
 	<line class="st0" x1="469.59" y1="1121.4" x2="469.59" y2="1175.63"/>
 	<line class="st0" x1="596.03" y1="1251.87" x2="692.49" y2="1230.77"/>
 </g>
-<g id="logosvg">
-	<line class="st0" x1="440.1" y1="149.96" x2="721.88" y2="371.02"/>
-	<polygon class="st0" points="721.88,139.51 721.88,371.02 440.1,392.93 440.1,149.96 	"/>
-	<line class="st0" x1="440.1" y1="392.93" x2="721.88" y2="139.51"/>
-</g>
-
 </svg>
+
+
