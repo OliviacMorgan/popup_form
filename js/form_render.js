@@ -4,11 +4,6 @@ window.addEventListener("load", e=>{
     var product = document.querySelector(".product")
     var svgindes = (document.getElementById("inside-design")).contentDocument;
 
-    // var logosvg = svgindes.querySelector("#logosvg");
-    // //this is how the product looks on load at the top of the page
-    // logosvg.style.display ='none'
-    
-
     //INSIDE DESIGN OPTIONS 
 
     //Begin style for color pull down menu
@@ -22,7 +17,6 @@ window.addEventListener("load", e=>{
     document.querySelector("#inside-design-options").addEventListener('input', evnt=>{
       //Begin popup color
       let coloroutline = svgindes.querySelector("#coloroutlinesvg");
-      console.log(coloroutline);
       let popupcolor = document.querySelector("select[name='color']").value;
       coloroutline.setAttribute('style', 'fill:'+popupcolor);
       //End popup color

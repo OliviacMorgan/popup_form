@@ -2,21 +2,32 @@
     width: 48%;
     padding: 5em 3em 6em 3em;
 }
-.calculator{
-    width:100%;
-    height: 5.5em;
+
+.total{
+    position:absolute;
     text-align: right;
-    padding: 2em;
-    background-color:rgb(230, 230, 230);
-    position:fixed;
-    bottom: 0
-    ;
+    padding: 0;
+    margin:0;
+    top:50%;
+    right: 1em;
+    transform: translate(0%, -50%);
+}
+
+.order-numbers{
+    position:absolute;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.order-bottom{
+    margin: 0em;
 }
 
 .product-panel{
-    width: 50%;
+    width: 40%;
     height: 50%;
-    padding: 2em;
+    padding: 1em;
     z-index: 1;
     border: 2px solid rgb(230, 230, 230);
     background-color: white;
@@ -24,9 +35,12 @@
     box-shadow:-20px 20px 20px rgb(202, 202, 202); 
     position: fixed;
     right:0;
-    top: 20%;
+    top: 15%;
 }
 .product{
+    position: absolute;
+    left: 0;
+    float: left;
     height: 100%;
     width: 78%;
 }
@@ -34,18 +48,16 @@
     position:absolute;
     height: 100%;
     width: 100%;
-}
-.order-numbers{
-    position: absolute;
-    bottom: 0;
-    right:1em;
-    width: 20%;
+    padding: 0 0 2em 0em;
 }
 
-.paper-overlay{
-    clip-path:url("#clipping");
-}
 
+.inside-logo{
+    position: relative;
+    top: 1em;
+    height: 2em;
+    z-index: 2;
+}
 /* hover messages start */
 /* BUG -- only works when hovering over radtio button, OLIVIA revisit this for more efficiency*/
 input[value='nocard']{
@@ -75,6 +87,7 @@ input {
     border-color: lightgray;
     border-style: solid;
     margin-bottom: 1em;
+    margin-top: .5em;
 }
 
 button {
@@ -97,11 +110,8 @@ input:focus {
     outline:none;
 }
 
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=password],
-input[type=search] {
+input,
+textarea {
     box-sizing: border-box;
     display: inline-block;
     border-width: 3px;
@@ -143,21 +153,17 @@ label:focus-within {
     color: rgb(44, 21, 126);
 }
 /* Help users distinguish the field the mouse is over */
-input[type=text]:hover,
-input[type=number]:hover,
-input[type=email]:hover,
-input[type=search]:hover,
-input[type=password]:hover {
+input:hover, 
+textarea:hover
+{
     border-color: darkblue;
     box-sizing: border-box;
     display: inline-block;
 }
 
-input[type=text]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-input[type=search]:focus,
-input[type=password]:focus {
+input:focus,
+textarea:focus
+{
     border-color: darkblue;
 }
 
