@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:800,700,600,400,300,200,100");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,900&display=swap');
-
+html{
+    margin: 0;
+    padding: 0;
+    
+}
 body{
     margin: 0;
     padding: 0;
@@ -25,6 +29,10 @@ h3, .h3 {
   h5, .h5 {
     font-size: 1.25rem;
   }
+  h6, .h6 {
+    font-size: 1rem;
+  }
+
 
 label, p, span{
     font-family:'Raleway', sans-serif;
@@ -102,57 +110,80 @@ hr {
 }
 
 /*Navigation Start*/
+#navi-content{
+    padding-top: 1em;
+}
+
 .navi-fixed{
     position: fixed;
     top:0em;
-    padding-top: 1em;
-    height: 5.5em;
+    height: 2.5em;
+    padding: 1.5em 1em 1.5em 3em;
     width: 100%;
-    background-color: white;
+    background-color:rgb(230, 230, 230);
     z-index: 100;
+    display: inline-flex;
 }
 
 #navi-button{
-    position: absolute;
-    width: 25px;
-    left: 50%;
-    transform: translate( -50% );
     display:none;
-    margin-bottom: .5em;
+    border: none;
+    height: 2em;
+    margin-left: 1em;
+    margin-top:0em;
+    background-color: white;
+    color: darkgrey;
+}
+#navi-button:hover {
+    color:black;
+}
+
+
+.logo{
+    height: 38px;
 }
 
 #navi-content nav ul li a{
     padding:0 0.5em;
     color: black;
 }
+#navi-content nav ul li a:hover{
+    font-weight: 600;
+}
+
 #navi-content nav ul li{
     display: inline-block;
+    vertical-align:bottom;
     color: black;
     font-size: 18px;
     font-weight: 300; 
+}
+#navi-content nav ul{
+    margin:0;
 }
 
 #navi-overlay {
     display: none;
     position: fixed;
+    bottom:0;
+    left:0;
     z-index: 10;
     width:100%;
-    height:100%;
+    height:200%;
     background-color: rgba(0, 0, 0, .5);
 }
 #navi-sidebar{
     display:none;
     position: fixed;
+    text-align: center;
     width:100%;
     z-index: 20;
-    top:6.5em;
-    padding-bottom: .5em;
-    background-color: #ffffff;
-    transform: translateX(-100%);
+    top:3.5em;
+    padding-top: .7em;
+    background-color:white; 
+    transform: translatey(-100%);
     transition: transform .2s ease-in-out;
 }
-
-
 
 #navi-sidebar-body nav ul li a{
     display: inline-block;
@@ -166,64 +197,48 @@ hr {
 /*Navigation End*/
 
 /* Footer start */
-    footer{
-        z-index: 2;
-        position: fixed;
-        height: 5.5em;
-        width: 100%;
-        background-color:rgb(230, 230, 230);
-        bottom:0;
+footer{
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    bottom:0;
+    width: 100%;
+    background-color:rgb(230, 230, 230);
+    padding-bottom: .7em;  
+}
+
+ .footer-rows{
+      width: 100%;
+      text-align: unset;
+      padding-top:1em;
+      padding-bottom: 0;
     }
-    
-        .footer-links{
-            position: absolute;
-            top: 50%;
-            left: 2em;
-            transform: translate(0%, -50%);
-        }
-    
-        .social-menu li a:before {
-                font-family: 'Fontawesome';
-                -webkit-font-smoothing: antialiased;
-         }
-         /*-- add in 			content: '\f08e'; to social-menu li a:before if you want all links to have icons--*/
-    
-        .social-menu li a[href*="facebook.com"]::before { content: '\f09a'; }
-    
-        .social-menu li a[href*="instagram.com"]::before { content: '\f16d'; }
-    
-        .social-menu li a[href*="linkedin.com"]::before { content: '\f0e1'; }
-    
-        .social-menu li a[href*="youtube.com"]::before { content: '\f167'; }
-    
-    
-        .social-menu ul {
-            display: flex;
-            flex-wrap: wrap;
-    
-        }
-    
-    
-        .menu ul {
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-        }
-    
-        .menu li a {
-                display: block;
-                text-decoration: none;
-                color: grey;
-                padding: .6em 1em;
-                font-weight: inherit !important;
-        }
+
+.social-menu img{
+        height: 20px;
+        padding:0em 1em 0em 1em;
+    }
+.social-menu ul {
+      display: flex;
+      justify-content: unset;
+      padding: 0;
+      margin:0;
+    } 
 /*footer end*/
 
 
-/* Smaller Screen Resize */
-
-@media only screen and (max-width: 600px){
-    /*Navigation Small Screen Start*/
+@media only screen and (max-width: 800px){
+/*Navigation Small Screen Start*/
+    .logo{
+        height: 30px;
+    }
+    .navi-fixed{
+        padding:.7em 0em .3em 0em;
+        justify-content: center;
+        vertical-align: center;
+    }
     #navi-content{
         display:none;
     }
@@ -236,6 +251,41 @@ hr {
     .navi-activated #navi-sidebar{
         transform: translatey(0);
     }
-    /*Navigation Small Screen End*/
+/*Navigation Small Screen End*/
+
+/*footer Small Screen Start*/
+    footer{
+        display: unset;
+      }
+    
+      .footer-rows{
+              width: 100%;
+              text-align: center;
+              padding-top:1em;
+              padding-bottom: 0;
+            }
+      .social-menu ul {
+              display: flex;
+              justify-content: center;
+              padding: 0;
+              margin:0;
+            }
+      .social-menu img{
+                height: 15px;
+                opacity: .6;
+            }
+
+/*footer end Small Screen*/
+
 }
+
+@media only screen and (max-width: 300px){
+    .logo{
+        height: 25px;
+    }
+    #navi-button{
+        height:25px;
+    }
+}
+
 

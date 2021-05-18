@@ -1,56 +1,35 @@
 .form-content{
-    width: 48%;
-    padding: 5em 3em 6em 3em;
+    width: 40vw;
+    padding: 6em 3em 6em 3em;
+    z-index: -1;
 }
 
 .total{
-    position:absolute;
-    text-align: right;
-    padding: 0;
     margin:0;
-    top:50%;
-    right: 1em;
-    transform: translate(0%, -50%);
-}
-
-.order-numbers{
-    position:absolute;
+    text-align: right;
+    padding-right: 1em;
+  }
+  
+  .order-numbers p{
+    margin: 0;
     text-align: center;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.order-bottom{
-    margin: 0em;
-}
-
-.product-panel{
-    width: 40%;
-    height: 50%;
-    padding: 1em;
-    z-index: 1;
-    border: 2px solid rgb(230, 230, 230);
-    background-color: white;
-    border-radius: 2em 0px 0px 2em;
-    box-shadow:-20px 20px 20px rgb(202, 202, 202); 
-    position: fixed;
-    right:0;
-    top: 15%;
-}
+  }
 .product{
     position: absolute;
-    left: 0;
-    float: left;
-    height: 100%;
-    width: 78%;
-}
-.product-render{
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0 0 2em 0em;
+    z-index: 2;
 }
 
+.product-render{
+    width: 35vw;
+    position: fixed;
+    right: 0;
+    top:6em;
+    height: 20em;
+    padding: 2em;
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 2em 0em 0em 2em;
+    box-shadow:-20px 20px 20px rgb(202, 202, 202); 
+}
 
 .inside-logo{
     position: relative;
@@ -137,11 +116,6 @@ input[type=file] {
     text-decoration: none;
 }
 
-.ordertotal {
-    font-weight: bold;
-}
-
-
 /* Give the user a hint that label is clickable */
 label {
     cursor: pointer;
@@ -175,25 +149,24 @@ textarea:focus
 
 
 @media only screen and (max-width: 800px){
-    .grid-container{
-        display: inline;
+    .product-render{
+        width: unset;
+        height: 27vh;
+        top:3.5em;
+        left:50%;
+        transform: translate(-50%, 0%);
+        width: 90%;
+        border-radius: 0em;
     }
+
     .form-content{
         width: 100%;
         text-align: center;
-        padding-top: 35vw;
+        margin-top: 35vh;
+        padding: 0;
     }
 
-    .product-panel{
-        width: 100%;
-        text-align: center;
-        align-content: center;
-        height: 35vw;
-        border-radius: 0em 0em 2em 2em;
-        box-shadow:0px 20px 20px rgb(202, 202, 202); 
-        border:0px;
-        top:55px;
-    }
+
     .order-numbers{
         position: relative;
         left:0;
@@ -201,9 +174,10 @@ textarea:focus
         width: auto;
     }
 
-    .product{
-        height: auto;
-        width: auto;
-    }
+    .total{
+        text-align: unset;
+        padding-right: 0;
+      }
 
 }
+

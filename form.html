@@ -6,15 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Popup Cards by Model Space</title>
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="css/main.css" rel="stylesheet"/>
   <link href="css/form.css" rel="stylesheet"/>
 
   <!-- Start Nav -->
-  <div class="">
-    <div class="navi-fixed">
-      <a href="index.html"><img class="logo clear" src="img/mslogo.png"></a>
-      <button id="navi-button">&#9776;</button>
+      <div class="navi-fixed">
+      <img class="logo clear" src="img/mslogo.png">
+      <button id="navi-button"> MENU</button>
       <div id="navi-content">
         <nav>
           <ul>
@@ -29,7 +27,6 @@
       <div id="navi-sidebar-body"></div>
     </div>
     <div id="navi-overlay"></div>
-  </div>
   <!-- End Nav -->
 
 </head>
@@ -37,13 +34,12 @@
 <body>
   <!-- Begin Product Panel -->
   <div class="product-panel">
-    <div class="product">
       <!--Base card image-->
-      <object id="" class="product-render" data="img/inside-upright.svg" type="image/svg+xml"></object>
+      <object id="" class="product-render product" data="img/inside-upright.svg" type="image/svg+xml"></object>
       <!--Spesific card image ontop of card-->
-      <object id="inside-design" class="product-render" data="img/inside-design.svg" type="image/svg+xml"></object>
+      <object id="inside-design" class="product-render product" data="img/inside-design.svg" type="image/svg+xml"></object>
 
-      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr">
+      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render product" direction="ltr">
         <!--first line of message-->
         <path id="messagelineone" fill="none" stroke="none" D="M614.85 1396.01,  L1647.48 1128.89" />
         <text x="0px" y="0px" text-anchor="middle" font-size="4em">
@@ -56,23 +52,11 @@
         </text>
       </svg>
       <!--placeholder logo-->
-
-    </div>
   </div>
   <!-- End Product Panel -->
   <div>
     <form action="" method="POST" class="form-content" id="popupform">
       <div id="top-form">
-        <div>
-          <h6>Cost per Card:</h6>
-          <!-- Add in Server Stored Cost per card later -->
-          <p>
-            50 Cards: &#36;<span id="fiftycost">12.75</span>
-            | 100 Cards: &#36;<span id="onehundredcost"></span>
-            | 500 Cards: &#36; <span id="fivehundredcost"></span>
-            | 1000+ Cards: &#36;<span id="onethousandcost"></span>
-          </p>
-        </div>
       </div>
       <fieldset id="general-design">
         <legend>
@@ -83,6 +67,14 @@
           <p>Minimum order of 50.</p>
           <input type="text" name="count" value="50" id="count">
         </label>
+        <h6>Cost per Card:</h6>
+        <!-- Add in Server Stored Cost per card later -->
+        <p>
+          50 Cards: &#36;<span id="fiftycost">12.75</span>
+          | 100 Cards: &#36;<span id="onehundredcost"></span>
+          | 500 Cards: &#36; <span id="fivehundredcost"></span>
+          | 1000+ Cards: &#36;<span id="onethousandcost"></span>
+        </p>
         <br>
         <label for="producttype" id="producttype">
           <h4>What kind of popup would you like?</h4>
@@ -214,7 +206,7 @@
             <h4>Would you like a message below this image?</h4>
             <input type="radio" name="outsidemessage" value="yesmes"> yes <br>
             <input type="radio" name="outsidemessage" value="nomes"> no <br>
-            <textarea name="" class="form-control" rows="4"></textarea>
+            <textarea name="" rows="4"></textarea>
             <br>
           </label>
           <div id="outsideimg2">
@@ -304,22 +296,26 @@
 
 
   <footer>
-    <div class="order-numbers">
-      <p>Order Quantity: <strong><output for="count" id="totalcount">50</output></strong></p>
-      <p class="order-bottom"> Your Cost Per Card: <strong>&#36;<output id="curcost"></output></strong></p>
+    <div class="footer-rows">
+      <h4 class="total"><strong>Total Cost: &#36;<output id="total"></output></strong></h4>
     </div>
-    <h4 class="total"><strong>Total Cost: &#36;<output id="total"></output></strong></h4>
 
-    <div class="footer-links">
-      <nav id="social-menu" class="social-menu menu" role="navigation">
+    <div class="order-numbers footer-rows">
+      <p>Order Quantity: <strong><output for="count" id="totalcount">50</output></strong></p> 
+      <p> Your Cost Per Card: <strong>&#36;<output id="curcost"></output></strong></p>
+    </div>
+
+    <div class="footer-rows">
+      <nav id="social-menu" class="social-menu" role="navigation">
         <ul>
-          <li><a href="https://www.facebook.com/yourmodelspace/" target="_blank" class="fa-lg"></a></li>
-          <li><a href="https://www.linkedin.com/company/your-model-space/" target="_blank" class="fa-lg"></a></li>
-          <li><a href="https://www.youtube.com/channel/UCqQ9DvZYDFB3jtOD9svxadQ" target="_blank" class="fa-lg"></a></li>
-          <li><a href="https://www.instagram.com/yourmodelspace/" target="_blank" class="fa-lg"></a></li>
+          <li><a href="https://www.facebook.com/yourmodelspace/" target="_blank"><img src="img/social/facebook.svg" alt="facebook link"></a></li>
+          <li><a href="https://www.linkedin.com/company/your-model-space/" target="_blank"><img src="img/social/linkedin.svg" alt="linkedin link"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCqQ9DvZYDFB3jtOD9svxadQ" target="_blank"><img src="img/social/youtube.svg" alt="youtube link"></a></li>
+          <li><a href="https://www.instagram.com/yourmodelspace/" target="_blank"><img src="img/social/instagram.svg" alt=""></a></li>
         </ul>
       </nav>
     </div>
+
   </footer>
 </body>
 
