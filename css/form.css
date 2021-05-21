@@ -14,13 +14,10 @@
     margin: 0;
     text-align: center;
   }
-.product{
-    position: absolute;
-    z-index: 2;
-}
+
 
 .product-render{
-    width: 35vw;
+    width: 40vw;
     position: fixed;
     right: 0;
     top:6em;
@@ -28,7 +25,7 @@
     padding: 2em;
     border: 2px solid rgb(230, 230, 230);
     border-radius: 2em 0em 0em 2em;
-    box-shadow:-20px 20px 20px rgb(202, 202, 202); 
+    box-shadow:-10px 10px 10px rgba(110, 110, 110, 0.07);
 }
 
 .inside-logo{
@@ -37,29 +34,9 @@
     height: 2em;
     z-index: 2;
 }
-/* hover messages start */
-/* BUG -- only works when hovering over radtio button, OLIVIA revisit this for more efficiency*/
-input[value='nocard']{
-    position: relative;
+.long-inputs{
+    width: 80%;
 }
-input[value='nocard']::after{
-    content:attr(data-tool-tip);
-    position: absolute;
-    top: 2em;
-    background-color: darkgrey;
-    display: block;
-    padding: .5em .5em;
-    white-space: nowrap;
-    font-size: .8em;
-    transform: scale(0);
-    transition:transform ease-out 100ms;
-}
-
-input[value='nocard']:hover::after{
-    transform: scale(1);
-}
-/* hover messages end */
-
 
 /* accessability start*/
 input {
@@ -149,13 +126,23 @@ textarea:focus
 
 
 @media only screen and (max-width: 800px){
+    .product-panel{
+        position: fixed;
+        right: 0;
+        top:2.6em;
+        padding:1em;
+        width: 100%;
+        height: 27vh;
+        background-color:white;
+    }
     .product-render{
         width: unset;
         height: 27vh;
-        top:3.5em;
+        padding:1em;
+        top:2.5em;
         left:50%;
         transform: translate(-50%, 0%);
-        width: 90%;
+        width: 100%;
         border-radius: 0em;
     }
 

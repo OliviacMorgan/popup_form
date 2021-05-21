@@ -1,10 +1,7 @@
 window.addEventListener("load", e=>{
     //Begin Product SVG render->
     //answerhere: https://stackoverflow.com/questions/2753732/how-to-access-svg-elements-with-javascript
-    var product = document.querySelector(".product")
     var svgindes = (document.getElementById("inside-design")).contentDocument;
-
-    //INSIDE DESIGN OPTIONS 
 
     //Begin style for color pull down menu
     //answer source: https://usefulangle.com/post/254/javascript-loop-through-select-options
@@ -14,11 +11,12 @@ window.addEventListener("load", e=>{
     });
     //End style for color pull down menu  
 
+    const popupcolor = document.querySelector("select[name='color']");
+
     document.querySelector("#inside-design-options").addEventListener('input', evnt=>{
       //Begin popup color
       let coloroutline = svgindes.querySelector("#coloroutlinesvg");
-      let popupcolor = document.querySelector("select[name='color']").value;
-      coloroutline.setAttribute('style', 'fill:'+popupcolor);
+      coloroutline.setAttribute('style', 'fill:'+popupcolor.value);
       //End popup color
 
       //Begin inside message of card
@@ -40,11 +38,26 @@ window.addEventListener("load", e=>{
         messageoutput1.innerHTML="";
         messageoutput2.innerHTML="";
       }
+      //End inside message of card
     });
-    //End inside message of card
+
+    document.querySelector("#outside-design-options").addEventListener('input', evnt=>{
+            //Begin outside message of card
+            let outsidemessage = document.querySelector('input[name="messageout"]');
+            let outsidemessageoutput = document.querySelector("textpath[href='#outsidemessage']");
+            outsidemessageoutput.innerHTML = outsidemessage.value
+            //End outside message of card
+
+            //begin outside image color
+                  let coloroutline = svgindes.querySelector("#coloroutlinesvg");
+      coloroutline.setAttribute('style', 'fill:'+popupcolor.value);
+            //end outside image color
+    });
+    
 
     //source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
     //This example doesn't totally work if your element is taller than your window, I fixed this in the return section
+
     function isInViewport(el) {
       const rect = el.getBoundingClientRect();
       //you used these logs to troubleshoot the values you needed 
@@ -54,15 +67,19 @@ window.addEventListener("load", e=>{
           rect.bottom - rect.height <= window.innerHeight/2 && rect.top + rect.height >= window.innerHeight/2   
       );
   }
-      const topform = document.querySelector('#top-form');
-      const gendes = document.querySelector('#general-design'); //OLIVIA - do we need this? delete div and id if not in html
+      const outdesop = document.querySelector("#outside-design-options");
+      const outdesren = document.querySelector("#outside-design-render");
+      const indesren = document.querySelector("#inside-design-render");
+      outdesren.style.opacity="0"
+
       document.addEventListener('scroll', function () {
-        const topformval = isInViewport(topform) ?
-        product.style.opacity = ".3":
-        product.style.opacity = "1";
+        isInViewport(outdesop) ?
+        indesren.style.opacity="0":
+        indesren.style.opacity="1";
 
-      }, {
-          passive:true
-        });
+        isInViewport(outdesop) ?
+        outdesren.style.opacity="1":
+        outdesren.style.opacity="0";
 
+      }, {passive:true});
 })

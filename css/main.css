@@ -132,10 +132,10 @@ hr {
     margin-left: 1em;
     margin-top:0em;
     background-color: white;
-    color: darkgrey;
+    color: black;
 }
 #navi-button:hover {
-    color:black;
+    color: grey;
 }
 
 
@@ -178,7 +178,7 @@ hr {
     text-align: center;
     width:100%;
     z-index: 20;
-    top:3.5em;
+    top:3.3em;
     padding-top: .7em;
     background-color:white; 
     transform: translatey(-100%);
@@ -235,7 +235,8 @@ footer{
         height: 30px;
     }
     .navi-fixed{
-        padding:.7em 0em .3em 0em;
+        height: unset;
+        padding:.7em 0em .7em 0em;
         justify-content: center;
         vertical-align: center;
     }

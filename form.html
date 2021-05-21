@@ -11,7 +11,7 @@
 
   <!-- Start Nav -->
       <div class="navi-fixed">
-      <img class="logo clear" src="img/mslogo.png">
+      <img class="logo clear" src="img/mslogo.png" alt="Model Space Logo">
       <button id="navi-button"> MENU</button>
       <div id="navi-content">
         <nav>
@@ -34,12 +34,13 @@
 <body>
   <!-- Begin Product Panel -->
   <div class="product-panel">
+      <div id="inside-design-render" >
       <!--Base card image-->
-      <object id="" class="product-render product" data="img/inside-upright.svg" type="image/svg+xml"></object>
+      <object id="" class="product-render" data="img/inside-upright.svg" type="image/svg+xml"></object>
       <!--Spesific card image ontop of card-->
-      <object id="inside-design" class="product-render product" data="img/inside-design.svg" type="image/svg+xml"></object>
+      <object id="inside-design" class="product-render" data="img/inside-design.svg" type="image/svg+xml"></object>
 
-      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render product" direction="ltr">
+      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr">
         <!--first line of message-->
         <path id="messagelineone" fill="none" stroke="none" D="M614.85 1396.01,  L1647.48 1128.89" />
         <text x="0px" y="0px" text-anchor="middle" font-size="4em">
@@ -51,13 +52,26 @@
           <textPath href="#messagelinetwo" startOffset="50%"></textPath>
         </text>
       </svg>
+    </div>
+
+    <div id="outside-design-render">
+      <object id="inside-design" class="product-render" data="img/outside-design.svg" type="image/svg+xml"></object>
+      <object id="inside-design" class="product-render" data="img/outside-upright.svg" type="image/svg+xml"></object>
+
+      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr"> 
+      <path id="outsidemessage" fill="none" stroke="none" D="M367.22 1226.08,  L1588.67 1226.08" />
+      <text x="0px" y="0px" text-anchor="middle" font-size="4em">
+        <textPath href="#outsidemessage" startOffset="50%"></textPath>
+      </text>
+      </svg>
+    </div>
+
+    </div>
       <!--placeholder logo-->
   </div>
   <!-- End Product Panel -->
   <div>
     <form action="" method="POST" class="form-content" id="popupform">
-      <div id="top-form">
-      </div>
       <fieldset id="general-design">
         <legend>
           <h2>General Design</h2>
@@ -139,10 +153,9 @@
             <!--OLIVIA -- include this radio in the formques.js-->
             <input type="radio" name="messagein" value="yesmesin"> yes <br>
             <input type="radio" name="messagein" value="nomesin"> no <br>
-            <input type="text" name="messageinfirst" placeholder="First line of your message" style="width: 80%">
+            <input type="text" name="messageinfirst" placeholder="First line of your message" class="long-inputs">
             <br>
-            <input type="text" name="messageinsecond" placeholder="Second line of your message. (optional)"
-              style="width: 80%;">
+            <input type="text" name="messageinsecond" placeholder="Second line of your message. (optional)" class="long-inputs">
             <br>
           </label>
 
@@ -191,7 +204,7 @@
 
       </fieldset>
 
-      <fieldset>
+      <fieldset id="outside-design-options">
         <div class="cardinput">
           <legend>
             <h2>Outside Design Options</h2>
@@ -206,7 +219,7 @@
             <h4>Would you like a message below this image?</h4>
             <input type="radio" name="outsidemessage" value="yesmes"> yes <br>
             <input type="radio" name="outsidemessage" value="nomes"> no <br>
-            <textarea name="" rows="4"></textarea>
+            <input type="text" name="messageout" placeholder="Your Message Here" class="long-inputs">
             <br>
           </label>
           <div id="outsideimg2">
@@ -236,7 +249,9 @@
       <!--Begin Mailing Card Spesific Questions-->
       <fieldset id="mail">
         <div class="cardinput">
+          <legend>
           <h2>Mailing Options</h2>
+          </legend>
           <label for="envelopes" id="mail1">
             <h4>Include Envelopes with your order?</h4>
             <p>+0.50 cents per card</p>

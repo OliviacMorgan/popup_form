@@ -3,19 +3,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 1500" style="enable-background:new 0 0 1920 1500;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
-	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 	.st2{fill:#969696;}
 	.st3{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
 	.st4{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
-	.st5{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
-	.st6{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
 </style>
-<g id="upright_card">
-	<polyline class="st1" points="1805.14,1300.76 1801.87,1363.39 26.8,1363.39 94.54,64.84 	"/>
-	<rect x="94.54" y="64.84" class="st0" width="1775.07" height="1235.92"/>
-</g>
-<g id="color_outline">
+<g id="coloroutlinesvg">
 	<path class="st2" d="M1535.98,662.9l-1.03-122.38h61.51v-63.31h-39.8l-148.55-119.2l-124.5,99.9V354.83h61.51v-63.31h-39.8
 		l-148.55-119.2l-148.55,119.2h-40.92v63.31h62.63v98.63l-118.95-95.45L787.34,457.2V354.83h60.62v-63.31h-39.8l-148.55-119.2
 		l-148.55,119.2h-40.92v63.31h62.63v122.38H342.97v305.35l-82.29,66.03h-40.92v63.31h62.63v122.38h52.01V911.9h62.22v122.38h139.46
@@ -27,6 +19,7 @@
 		h64.3v51.5h-64.3V354.83z M1251.67,777.71h-64.3v-51.5h64.3V777.71z M1395.49,662.9h-62.22V540.52h62.22V662.9z M1432.11,540.52
 		h64.3v51.5h-64.3V540.52z M1507.52,963.4h-64.3v-51.5h64.3V963.4z"/>
 </g>
+
 <g id="popup_outline">
 	<path class="st3" d="M1535.98,662.78l-1.03-122.38h61.51v-63.31h-39.8l-148.55-119.2l-124.5,99.9V354.71h61.51V291.4h-39.8
 		l-148.55-119.2l-148.55,119.2h-40.92v63.31h62.63v98.63L910.96,357.9l-123.62,99.19V354.71h60.62V291.4h-39.8l-148.55-119.2
@@ -287,22 +280,6 @@
 	<polygon class="st4" points="260.68,848.59 219.76,848.59 219.76,911.9 282.39,911.9 282.39,1034.28 334.4,1034.28 334.4,911.9 
 		396.62,911.9 396.62,1034.28 536.08,1034.28 536.08,911.9 597.59,911.9 597.59,848.59 557.79,848.59 409.23,729.39 	"/>
 </g>
-<g id="logo">
-	<g>
-		<rect x="257.01" y="195.98" class="st5" width="1450.13" height="710.27"/>
-		<line class="st0" x1="257.01" y1="195.98" x2="1707.14" y2="906.26"/>
-		<line class="st5" x1="1707.14" y1="195.98" x2="257.01" y2="906.26"/>
-	</g>
-</g>
-<g id="dup_logo">
-	<g>
-		<rect x="159.01" y="123.63" class="st5" width="1646.13" height="1112.31"/>
-		<line class="st0" x1="159.01" y1="123.63" x2="1805.14" y2="1235.95"/>
-		<line class="st5" x1="1805.14" y1="123.63" x2="159.01" y2="1235.95"/>
-	</g>
-</g>
-<g id="message">
-	<line class="st6" x1="367.22" y1="1226.08" x2="1588.67" y2="1226.08"/>
-	<line class="st6" x1="367.22" y1="1160.53" x2="1588.67" y2="1160.53"/>
-</g>
+
+
 </svg>
