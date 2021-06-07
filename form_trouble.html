@@ -1,119 +1,40 @@
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/main.css" rel="stylesheet"/>
-  <script>
-	  window.addEventListener.load(e=>{
-		
-	  });
-  </script>
-    <!-- language: lang-css -->
+<!-- begin snippet: js hide: false console: true babel: null -->
 <style>
-
-
-.total{
-  margin:0;
-  text-align: right;
-  padding-right: 1em;
-}
-
-.order-numbers p{
-  margin: 0;
-  text-align: center;
-}
-
-
-    footer{
-        z-index: 2;
-        position: fixed;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        bottom:0;
-        width: 100%;
-        background-color:rgb(230, 230, 230);
-        padding-bottom: .7em;  
+    svg {
+        position: absolute;
+        width: 20vw;
     }
-    
-        .footer-rows{
-          width: 100%;
-          text-align: unset;
-          padding-top:1em;
-          padding-bottom: 0;
-        }
-    
-        .social-menu img{
-            height: 20px;
-            padding:0em 1em 0em 1em;
-        }
-        .social-menu ul {
-          display: flex;
-          justify-content: unset;
-          padding: 0;
-          margin:0;
-        }
+
+    img {
+        width: 100px;
+        position: absolute;
+        transform: skew(-3deg, -4deg);
 
 
-@media only screen and (max-width: 800px){
-  .total{
-    text-align: unset;
-    padding-right: 0;
-  }
-  footer{
-    display: unset;
-  }
+    }
+</style>
 
-  .footer-rows{
-          width: 100%;
-          text-align: center;
-          padding-top:1em;
-          padding-bottom: 0;
-        }
-  .social-menu ul {
-          display: flex;
-          justify-content: center;
-          padding: 0;
-          margin:0;
-        }
-  .social-menu img{
-            height: 15px;
-            opacity: .6;
-        }
+<!-- sources: https://stackoverflow.com/questions/46807213/how-to-center-image-in-svg -->
 
-
-}
-    </style>
-  <title>Document</title>
-</head>
 <body>
-  <!-- Start Nav -->
-  
 
-  <footer>
-    <div class="footer-rows">
-      <h4 class="total"><strong>Total Cost: &#36;<output id="total"></output></strong></h4>
-    </div>
+    <svg x="0px" y="0px" viewBox="0 0 1190.2 1500" id="logo-path">
+        <!-- source: https://stackoverflow.com/questions/28756890/fill-svg-path-element-with-a-background-image-without-tiling-or-scaling-->
+        <defs>
+            <pattern id="imgpattern" x="0" y="0" width="1" height="1">
+                <image y="25" width="1180" height="400"
+                    xlink:href="https://www.graphicsprings.com/filestorage/stencils/5abd71de17b6d9fed3a0642a1b65c92f.png?width=500&height=500"
+                    style="transform:skew(-2deg, -3deg)" />
+            </pattern>
+        </defs>
 
-    <div class="order-numbers footer-rows">
-      <p>Order Quantity: <strong><output for="count" id="totalcount">50</output></strong></p> 
-      <p> Your Cost Per Card: <strong>&#36;<output id="curcost"></output></strong></p>
-    </div>
+        <path fill="url(#imgpattern)" stroke="black" stroke-width="4"
+            d="M-0.1,44.2 L1190.2,0l-13.4,341.2L9.8,438.8L-0.1,44.2z" />
 
-    <div class="footer-rows">
-      <nav id="social-menu" class="social-menu" role="navigation">
-        <ul>
-          <li><a href="https://www.facebook.com/yourmodelspace/" target="_blank"><img src="img/social/facebook.svg" alt="facebook link"></a></li>
-          <li><a href="https://www.linkedin.com/company/your-model-space/" target="_blank"><img src="img/social/linkedin.svg" alt="linkedin link"></a></li>
-          <li><a href="https://www.youtube.com/channel/UCqQ9DvZYDFB3jtOD9svxadQ" target="_blank"><img src="img/social/youtube.svg" alt="youtube link"></a></li>
-          <li><a href="https://www.instagram.com/yourmodelspace/" target="_blank"><img src="img/social/instagram.svg" alt=""></a></li>
-        </ul>
-      </nav>
-    </div>
-
-  </footer>
-
+    </svg>
 </body>
-</html>
+<!-- end snippet -->
+<!-- language: lang-js -->
+<script>
+
+</script>

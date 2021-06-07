@@ -8,10 +8,13 @@
 	<polygon class="st0" points="1158.86,953.31 1195.81,13.66 5.47,57.83 33.47,1167.26 697.86,1487.98 1914.03,1174.31 	"/>
 	<line class="st0" x1="1158.86" y1="953.31" x2="33.47" y2="1167.26"/>
 </g>
-<g id="logosvg">
-	<line class="st0" x1="440.1" y1="149.96" x2="721.88" y2="371.02"/>
-	<polygon class="st0" points="721.88,139.51 721.88,371.02 440.1,392.93 440.1,149.96 	"/>
-	<line class="st0" x1="440.1" y1="392.93" x2="721.88" y2="139.51"/>
-</g>
-
+   <!-- source: https://stackoverflow.com/questions/28756890/fill-svg-path-element-with-a-background-image-without-tiling-or-scaling-->
+        <defs >
+            <pattern id="imgpattern" x="0" y="0" width="1" height="1">
+                <image  id="client-logo" y="25" width="1180" height="400"
+                    style="transform:skew(-2deg, -3deg)" />
+            </pattern>
+        </defs>
+        <path fill="url(#imgpattern)" stroke="none" 
+            d="M-0.1,44.2 L1190.2,0l-13.4,341.2L9.8,438.8L-0.1,44.2z" />
 </svg>

@@ -6,27 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Popup Cards by Model Space</title>
 
-  <link href="css/main.css" rel="stylesheet"/>
-  <link href="css/form.css" rel="stylesheet"/>
+
+
+  <link href="css/main.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
 
   <!-- Start Nav -->
-      <div class="navi-fixed">
-      <img class="logo clear" src="img/mslogo.png" alt="Model Space Logo">
-      <button id="navi-button"> MENU</button>
-      <div id="navi-content">
-        <nav>
-          <ul>
-            <li><a href="#">Popups</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </nav>
-      </div>
+  <div class="navi-fixed">
+    <img class="logo clear" src="img/mslogo.png" alt="Model Space Logo">
+    <button id="navi-button"> MENU</button>
+    <div id="navi-content">
+      <nav>
+        <ul>
+          <li><a href="#">Popups</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
     </div>
-    <div id="navi-sidebar">
-      <div id="navi-sidebar-body"></div>
-    </div>
-    <div id="navi-overlay"></div>
+  </div>
+  <div id="navi-sidebar">
+    <div id="navi-sidebar-body"></div>
+  </div>
+  <div id="navi-overlay"></div>
   <!-- End Nav -->
 
 </head>
@@ -34,12 +36,11 @@
 <body>
   <!-- Begin Product Panel -->
   <div class="product-panel">
-      <div id="inside-design-render" >
+    <div id="inside-design-render">
       <!--Base card image-->
-      <object id="" class="product-render" data="img/inside-upright.svg" type="image/svg+xml"></object>
+      <object id="inside-upright" class="product-render" data="img/inside-upright.svg" type="image/svg+xml"></object>
       <!--Spesific card image ontop of card-->
       <object id="inside-design" class="product-render" data="img/inside-design.svg" type="image/svg+xml"></object>
-
       <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr">
         <!--first line of message-->
         <path id="messagelineone" fill="none" stroke="none" D="M614.85 1396.01,  L1647.48 1128.89" />
@@ -55,19 +56,18 @@
     </div>
 
     <div id="outside-design-render">
-      <object id="inside-design" class="product-render" data="img/outside-design.svg" type="image/svg+xml"></object>
-      <object id="inside-design" class="product-render" data="img/outside-upright.svg" type="image/svg+xml"></object>
+      <object id="outside-design" class="product-render" data="img/outside-design.svg" type="image/svg+xml"></object>
+      <object id="outside-upright" class="product-render" data="img/outside-upright.svg" type="image/svg+xml"></object>
 
-      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr"> 
-      <path id="outsidemessage" fill="none" stroke="none" D="M367.22 1226.08,  L1588.67 1226.08" />
-      <text x="0px" y="0px" text-anchor="middle" font-size="4em">
-        <textPath href="#outsidemessage" startOffset="50%"></textPath>
-      </text>
+      <svg x="0px" y="0px" viewBox="0 0 1920 1500" class="product-render" direction="ltr">
+        <path id="outsidemessage" fill="none" stroke="none" D="M367.22 1226.08,  L1588.67 1226.08" />
+        <text x="0px" y="0px" text-anchor="middle" font-size="4em">
+          <textPath href="#outsidemessage" startOffset="50%" class="outside-message"></textPath>
+        </text>
       </svg>
     </div>
 
-    </div>
-      <!--placeholder logo-->
+  </div>
   </div>
   <!-- End Product Panel -->
   <div>
@@ -101,156 +101,189 @@
       </fieldset>
       <hr>
       <br>
-
-      <fieldset id="inside-design-options">
-        <legend>
-          <h2>Inside Design Options</h2>
-        </legend>
-        <label for="color">
-          <h4>What color would you like your popup to be?</h4>
-          <select name="color" id="color-menu">
-            <!--OLIVIA- add in extra card values to final cost calculation-->
-            <div></div>
-            <option value="#969696">Insert Color</option>
-            <option value="#5F4C3D">chocolate</option>
-            <option value="#2C2C2C">black</option>
-            <option value="#858585">smoke</option>
-            <option value="#B8232F">ruby red</option>
-            <option value="#46232A">burgundy</option>
-            <option value="#B8232F">garnet</option>
-            <option value="#EE4D9D">magenta</option>
-            <option value="#FFC6CD">candy pink</option>
-            <option value="#FBC6B6">blush</option>
-            <option value="#D0D5EB">lilac</option>
-            <option value="#BBDDF8">baby blue</option>
-            <option value="#576DB6">boardwalk blue</option>
-            <option value="#AEBBB2">slate</option>
-            <option value="#B0DFD7">seafoam</option>
-            <option value="#214370">navy</option>
-            <option value="#0E92C3">pool</option>
-            <option value="#B6DBE4">pastel blue</option>
-            <option value="#404751">nautical blue</option>
-            <option value="#026F74">teal</option>
-            <option value="#CCE505">wasabi</option>
-            <option value="#579667">holiday green</option>
-            <option value="#13442F">green linen</option>
-            <option value="#88C557">limelight</option>
-            <option value="#A7D8A9">pastel green</option>
-            <option value="#99A960">avocado</option>
-            <option value="#FDF69E">lemonade</option>
-            <option value="#FFF9A1">citrus</option>
-            <option value="#FFBD04">sunflower</option>
-            <option value="#FF7A39">mandarin</option>
-            <option value="#FD393B">electric coral</option>
-            <option value="#EE5E43">tangerine</option>
-          </select>
-          <br>
-        </label>
+      <!--Begin card customization for form_render.js-->
+      <div id="card-customization">
         <!--Begin Card Design Spesific questions-->
-        <div class="cardinput">
-          <label for="messagein">
-            <h4>Would you like a message on the bottom inside of your card?</h4>
-            <!--OLIVIA -- include this radio in the formques.js-->
-            <input type="radio" name="messagein" value="yesmesin"> yes <br>
-            <input type="radio" name="messagein" value="nomesin"> no <br>
-            <input type="text" name="messageinfirst" placeholder="First line of your message" class="long-inputs">
-            <br>
-            <input type="text" name="messageinsecond" placeholder="Second line of your message. (optional)" class="long-inputs">
-            <br>
-          </label>
-
-          <label for="font" id="fontoptions1">
-            <h4>What font would you like to use for your message?</h4>
-            <br>
-            <select name="font">
-              <option> Select a Font</option>
-              <option style="font-family:Helvetica, sans-serif">Helvetica, sans-serif</option>
-              <option style="font-family:roboto">Roboto</option>
-              <option style="font-family:raleway">Raleway</option>
-              <option style="font-family:tahoma">Tahoma</option>
-              <option style="font-family:Trebuchet MS">Trebuchet MS</option>
-              <option style="font-family:Playfair Display">Playfair Display</option>
-              <option style="font-family:Times New Roman">Times New Roman</option>
-              <option style="font-family:georgia">Georgia</option>
-              <option style="font-family:Garamond, serif;">Garamond, serif</option>
-              <option style="font-family:courier new">Courier New</option>
-              <option style="font-family:Brush Script MT">Brush Script MT</option>
-              <option style="font-family:arial">Arial</option>
-              <option style="font-family:Verdana, sans-serif">Verdana, sans-serif</option>
-              <option value="More Font Options">More Font Options</option>
-            </select>
-          </label>
-
-          <label for="morefonts" id="fontoptions2">
-            <br>
-            Let us know your prefered font and we will follow up to confirm your design. <br>
-            <input type="text" name="morefonts">
-            <br>
-          </label>
-
-          <label for="logo">
-            <div id="includelogo1">
-              <h4>Include your logo above your message?</h4>
-              <input type="radio" name="logo" value="yeslogo"> yes <br>
-              <input type="radio" name="logo" value="nologo"> no <br>
-            </div>
-            <div id="includelogo2">
-              Upload your logo here: <br>
-              <input type="file" name="logofile">
-            </div>
-          </label>
-          <hr>
-        </div>
-
-      </fieldset>
-
-      <fieldset id="outside-design-options">
-        <div class="cardinput">
+        <fieldset id="inside-design-options">
           <legend>
-            <h2>Outside Design Options</h2>
+            <h2>Inside Design Options</h2>
           </legend>
-          <label for="front" id="outsideimg1">
-            <h4>Would you like to change the default linework image on the front of the card?</h4>
-            <input type="radio" name="front" value="yesimg"> yes <br>
-            <input type="radio" name="front" value="noimg"> no <br>
-          </label>
-          <!-- OLIVIA Include this in the formque.js-->
-          <label for="outsidemessage">
-            <h4>Would you like a message below this image?</h4>
-            <input type="radio" name="outsidemessage" value="yesmes"> yes <br>
-            <input type="radio" name="outsidemessage" value="nomes"> no <br>
-            <input type="text" name="messageout" placeholder="Your Message Here" class="long-inputs">
+          <label for="color">
+            <h4>What color would you like your popup to be?</h4>
+            <select name="color" id="color-menu">
+              <option value="#969696">Insert Color</option>
+              <option value="#5F4C3D">chocolate</option>
+              <option value="#2C2C2C">black</option>
+              <option value="#858585">smoke</option>
+              <option value="#B8232F">ruby red</option>
+              <option value="#46232A">burgundy</option>
+              <option value="#B8232F">garnet</option>
+              <option value="#EE4D9D">magenta</option>
+              <option value="#FFC6CD">candy pink</option>
+              <option value="#FBC6B6">blush</option>
+              <option value="#D0D5EB">lilac</option>
+              <option value="#BBDDF8">baby blue</option>
+              <option value="#576DB6">boardwalk blue</option>
+              <option value="#AEBBB2">slate</option>
+              <option value="#B0DFD7">seafoam</option>
+              <option value="#214370">navy</option>
+              <option value="#0E92C3">pool</option>
+              <option value="#B6DBE4">pastel blue</option>
+              <option value="#404751">nautical blue</option>
+              <option value="#026F74">teal</option>
+              <option value="#CCE505">wasabi</option>
+              <option value="#579667">holiday green</option>
+              <option value="#13442F">green linen</option>
+              <option value="#88C557">limelight</option>
+              <option value="#A7D8A9">pastel green</option>
+              <option value="#99A960">avocado</option>
+              <option value="#FDF69E">lemonade</option>
+              <option value="#FFF9A1">citrus</option>
+              <option value="#FFBD04">sunflower</option>
+              <option value="#FF7A39">mandarin</option>
+              <option value="#FD393B">electric coral</option>
+              <option value="#EE5E43">tangerine</option>
+            </select>
             <br>
           </label>
-          <div id="outsideimg2">
-            <label for="logoreuse" id="outsideimg3">
-              <h4>Use your logo from before?</h4>
-              <input type="radio" value="yesbefore" name="logoreuse"> yes <br>
-              <input type="radio" value="nobefore" name="logoreuse"> no - upload a new image<br>
+          <div class="cardinput">
+            <label for="messagein">
+              <h4>Would you like a message on the bottom inside of your card?</h4>
+              <!--OLIVIA -- include this radio in the formques.js-->
+              <input type="radio" name="messagein" value="yesmesin"> yes <br>
+              <input type="radio" name="messagein" value="nomesin"> no <br>
+              <input type="text" name="messageinfirst" placeholder="First line of your message. (optional)"
+                class="long-inputs">
+              <br>
+              <input type="text" name="messageinsecond" placeholder="Second line of your message. (optional)"
+                class="long-inputs">
+              <br>
             </label>
-            <div id="outsideimg4"><br>
-              <p>Upload your new Image here:</p>
-              <input type="file" id="file" name="logoreuse">
-              <label for="imagefit">
-                <h4>How would you like your image to fit?</h4>
-                <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
-                <!--OLIVIA - if choose this option AND add outside message add note about "message may not come out ok yada yada"-->
-                <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
-                Any extra notes on image size or positioning? <br>
-                <input type="text" name="imagefitnotes">
-              </label>
-            </div>
+
+            <label for="font" id="fontoptions1">
+              <h4>What font would you like to use for your message?</h4>
+              <br>
+              <select name="font">
+                <option> Select a Font</option>
+                <option style="font-family:Helvetica, sans-serif">Helvetica, sans-serif</option>
+                <option style="font-family:roboto">Roboto</option>
+                <option style="font-family:raleway">Raleway</option>
+                <option style="font-family:tahoma">Tahoma</option>
+                <option style="font-family:Trebuchet MS">Trebuchet MS</option>
+                <option style="font-family:Playfair Display">Playfair Display</option>
+                <option style="font-family:Times New Roman">Times New Roman</option>
+                <option style="font-family:georgia">Georgia</option>
+                <option style="font-family:Garamond, serif;">Garamond, serif</option>
+                <option style="font-family:courier new">Courier New</option>
+                <option style="font-family:Brush Script MT">Brush Script MT</option>
+                <option style="font-family:arial">Arial</option>
+                <option style="font-family:Verdana, sans-serif">Verdana, sans-serif</option>
+                <option value="More Font Options">More Font Options</option>
+              </select>
+            </label>
+
+            <label for="morefonts" id="fontoptions2">
+              <br>
+              Let us know your prefered font and we will follow up to confirm your design. <br>
+              <input type="text" name="morefonts">
+              <br>
+            </label>
+
+            <label for="logo">
+              <div id="includelogo1">
+                <h4>Include your logo above your message?</h4>
+                <input type="radio" name="logo" value="yeslogo"> yes <br>
+                <input type="radio" name="logo" value="nologo"> no <br>
+              </div>
+              <div id="includelogo2">
+                Upload your logo here: <br>
+                <input type="file" name="logofile" accept="image/*">
+              </div>
+            </label>
+            <hr>
           </div>
-          <hr>
-        </div>
-      </fieldset>
-      <!--End Card Design Spesific questions-->
+
+        </fieldset>
+
+        <fieldset id="outside-design-options">
+          <div class="cardinput">
+            <legend>
+              <h2>Outside Design Options</h2>
+            </legend>
+            <label for="front" id="outsideimg1">
+              <h4>Would you like to change the default linework image on the front of the card?</h4>
+              <input type="radio" name="front" value="yesimg"> yes <br>
+              <input type="radio" name="front" value="noimg"> no <br>
+            </label>
+            <!-- OLIVIA Include this in the formque.js-->
+            <label for="outsidemessage">
+              <h4>Would you like a message below this image?</h4>
+              <input type="radio" name="outsidemessage" value="yesmes"> yes <br>
+              <input type="radio" name="outsidemessage" value="nomes"> no <br>
+              <input type="text" name="messageout" placeholder="Your Message Here" class="long-inputs">
+              <br>
+            </label>
+            <!-- OLIVIA Include this in the formque.js-->
+            <label for="outsidefont" id="outsidefontoptions1">
+              <h4>Would you like to change the font?</h4>
+              <input type="radio" name="outsidefont" value="yesfont"> yes <br>
+              <input type="radio" name="outsidefont" value="nofont"> no <br>
+              <br>
+              <select name="outsidefont">
+                <option value="select font">Select Font</option>
+                <option style="font-family:Helvetica, sans-serif">Helvetica, sans-serif</option>
+                <option style="font-family:roboto">Roboto</option>
+                <option style="font-family:raleway">Raleway</option>
+                <option style="font-family:tahoma">Tahoma</option>
+                <option style="font-family:Trebuchet MS">Trebuchet MS</option>
+                <option style="font-family:Playfair Display">Playfair Display</option>
+                <option style="font-family:Times New Roman">Times New Roman</option>
+                <option style="font-family:georgia">Georgia</option>
+                <option style="font-family:Garamond, serif;">Garamond, serif</option>
+                <option style="font-family:courier new">Courier New</option>
+                <option style="font-family:Brush Script MT">Brush Script MT</option>
+                <option style="font-family:arial">Arial</option>
+                <option style="font-family:Verdana, sans-serif">Verdana, sans-serif</option>
+                <option value="More Outside Font Options">More Font Options</option>
+              </select>
+            </label>
+            <label for="moreoutsidefonts" id="outsidefontoptions2">
+              <br>
+              Let us know your prefered font and we will follow up to confirm your design. <br>
+              <input type="text" name="morefonts">
+              <br>
+            </label>
+            <div id="outsideimg2">
+              <label for="logoreuse" id="outsideimg3">
+                <h4>Use your logo from before?</h4>
+                <input type="radio" value="yesbefore" name="logoreuse"> yes <br>
+                <input type="radio" value="nobefore" name="logoreuse"> no - upload a new image<br>
+              </label>
+              <div id="outsideimg4"><br>
+                <p>Upload your new Image here:</p>
+                <input type="file" id="file" name="logoreuse">
+                <label for="imagefit">
+                  <h4>How would you like your image to fit?</h4>
+                  <input type="radio" name="imagfit" value="fit"> Scaled to fit inside card <br>
+                  <!--OLIVIA - if choose this option AND add outside message add note about "message may not come out ok yada yada"-->
+                  <input type="radio" name="imagefit" value="fill"> Scaled to fill card <br>
+                  Any extra notes on image size or positioning? <br>
+                  <input type="text" name="imagefitnotes">
+                </label>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </fieldset>
+        <!--End Card Design Spesific questions-->
+      </div>
+      <!--end card customization for form_render.js-->
 
       <!--Begin Mailing Card Spesific Questions-->
       <fieldset id="mail">
         <div class="cardinput">
           <legend>
-          <h2>Mailing Options</h2>
+            <h2>Mailing Options</h2>
           </legend>
           <label for="envelopes" id="mail1">
             <h4>Include Envelopes with your order?</h4>
@@ -316,17 +349,21 @@
     </div>
 
     <div class="order-numbers footer-rows">
-      <p>Order Quantity: <strong><output for="count" id="totalcount">50</output></strong></p> 
+      <p>Order Quantity: <strong><output for="count" id="totalcount">50</output></strong></p>
       <p> Your Cost Per Card: <strong>&#36;<output id="curcost"></output></strong></p>
     </div>
 
     <div class="footer-rows">
       <nav id="social-menu" class="social-menu" role="navigation">
         <ul>
-          <li><a href="https://www.facebook.com/yourmodelspace/" target="_blank"><img src="img/social/facebook.svg" alt="facebook link"></a></li>
-          <li><a href="https://www.linkedin.com/company/your-model-space/" target="_blank"><img src="img/social/linkedin.svg" alt="linkedin link"></a></li>
-          <li><a href="https://www.youtube.com/channel/UCqQ9DvZYDFB3jtOD9svxadQ" target="_blank"><img src="img/social/youtube.svg" alt="youtube link"></a></li>
-          <li><a href="https://www.instagram.com/yourmodelspace/" target="_blank"><img src="img/social/instagram.svg" alt=""></a></li>
+          <li><a href="https://www.facebook.com/yourmodelspace/" target="_blank"><img src="img/social/facebook.svg"
+                alt="facebook link"></a></li>
+          <li><a href="https://www.linkedin.com/company/your-model-space/" target="_blank"><img
+                src="img/social/linkedin.svg" alt="linkedin link"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCqQ9DvZYDFB3jtOD9svxadQ" target="_blank"><img
+                src="img/social/youtube.svg" alt="youtube link"></a></li>
+          <li><a href="https://www.instagram.com/yourmodelspace/" target="_blank"><img src="img/social/instagram.svg"
+                alt=""></a></li>
         </ul>
       </nav>
     </div>
@@ -338,5 +375,7 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/form_render.js"></script>
 <script src="js/calculator.js"></script>
+
+
 
 </html>

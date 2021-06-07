@@ -3,12 +3,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 1500" style="enable-background:new 0 0 1920 1500;" xml:space="preserve">
 <style type="text/css">
-	.st2{fill:#969696;}
 	.st3{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
 	.st4{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
 </style>
-<g id="coloroutlinesvg">
-	<path class="st2" d="M1535.98,662.9l-1.03-122.38h61.51v-63.31h-39.8l-148.55-119.2l-124.5,99.9V354.83h61.51v-63.31h-39.8
+	<path id="coloroutlinesvg" style="fill:#969696;"  
+		d="M1535.98,662.9l-1.03-122.38h61.51v-63.31h-39.8l-148.55-119.2l-124.5,99.9V354.83h61.51v-63.31h-39.8
 		l-148.55-119.2l-148.55,119.2h-40.92v63.31h62.63v98.63l-118.95-95.45L787.34,457.2V354.83h60.62v-63.31h-39.8l-148.55-119.2
 		l-148.55,119.2h-40.92v63.31h62.63v122.38H342.97v305.35l-82.29,66.03h-40.92v63.31h62.63v122.38h52.01V911.9h62.22v122.38h139.46
 		V911.9h61.51v122.38h127.16V911.9h62.63v122.38h52.01V911.9h62.22v122.38h139.46V911.9h61.51v122.38h127.16V911.9h62.63v122.38
@@ -18,7 +17,6 @@
 		v-51.5h64.3V963.4z M1081.92,354.83h62.22v122.38h-62.22V354.83z M1150.74,848.59h-62.22V726.21h62.22V848.59z M1180.76,354.83
 		h64.3v51.5h-64.3V354.83z M1251.67,777.71h-64.3v-51.5h64.3V777.71z M1395.49,662.9h-62.22V540.52h62.22V662.9z M1432.11,540.52
 		h64.3v51.5h-64.3V540.52z M1507.52,963.4h-64.3v-51.5h64.3V963.4z"/>
-</g>
 
 <g id="popup_outline">
 	<path class="st3" d="M1535.98,662.78l-1.03-122.38h61.51v-63.31h-39.8l-148.55-119.2l-124.5,99.9V354.71h61.51V291.4h-39.8
